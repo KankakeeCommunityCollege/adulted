@@ -1,6 +1,6 @@
 <nav id="mainNav" role="navigation" class="navbar navbar-expand-lg navbar-light bg-light local-nav fixed-top navbar-fixed-top">
   <a href="{{ page.baseurl }}" class="links__local-nav__newsroom-heading-link typography__newsroom-heading navbar-brand">
-    <h1 class="typography__newsroom-main-heading">Foundation</h1>
+    <h1 class="typography__newsroom-main-heading">{{ page.title }}</h1>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -15,19 +15,16 @@
         <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{ page.baseurl }}about/">About</a>
       </li>
       <li id="events" class="nav-item">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{ page.baseurl }}events/">Events</a>
+        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{ page.baseurl }}programs/">Programs</a>
       </li>
       <li id="alumni" class="nav-item">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{ page.baseurl }}alumni/">Alumni</a>
+        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{ page.baseurl }}resources/">Resources</a>
       </li>
       <li id="scholarships" class="nav-item">
-        <a href="{{ page.baseurl }}scholarships/" class="nav-link links__local-nav__nav-link--color typography__nav-link">Scholarships</a>
-      </li>
-      <li id="contacts" class="nav-item">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{ page.baseurl }}#contact">Contact</a>
+        <a href="{{ page.baseurl }}contact/" class="nav-link links__local-nav__nav-link--color typography__nav-link">Contact</a>
       </li>
       <li id="give" class="nav-item">
-        <a href="{{ page.baseurl }}give/" class="btn btn-primary typography__nav-link">Give</a>
+        <a href="{{ page.baseurl }}enroll/" class="btn btn-primary typography__nav-link">Enroll</a>
       </li>
       <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
