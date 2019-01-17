@@ -1,7 +1,7 @@
 ---
 name: Kaylynn Cole
 degree: Associate Degree
-year: 2014
+order: 2014
 portrait: uploads/kaylynn-cole_crop.jpg
 quote: "The experiences I gained at KCC and the people I met along the way continue to benefit me and keep me on a path to success."
 ---

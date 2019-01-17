@@ -102,3 +102,20 @@
     margin-top: 160px;
   }
 }
+
+.position__col--no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.position__section--margin-top {
+  margin-top: 15px;
+}
+
+.position__col--img-overline {
+  bottom: -15px;
+  margin-top: -15px; // to offset for the relative positioning
+  overflow-x: hidden;
+  position: relative;
+  z-index: 4;
+}

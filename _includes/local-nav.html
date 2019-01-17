@@ -23,8 +23,15 @@
       <li id="scholarships" class="nav-item">
         <a href="{{ page.baseurl }}contact/" class="nav-link links__local-nav__nav-link--color typography__nav-link">Contact</a>
       </li>
-      <li id="give" class="nav-item">
-        <a href="{{ page.baseurl }}enroll/" class="btn btn-primary typography__nav-link">Enroll</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle btn btn-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Enroll
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ page.baseurl }}programs/community-literacy/">Community Literacy</a>
+          <a class="dropdown-item" href="{{ page.baseurl }}programs/esl">English as a Second Language</a>
+          <a class="dropdown-item" href="{{ page.baseurl }}programs/ged">GED/High School Equivalency</a>
+        </div>
       </li>
       <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

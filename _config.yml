@@ -6,7 +6,7 @@ collections:
     output: false
   distinguished_alumnis:
     output: false
-  alumnis:
+  students:
     output: false
   posts:
     output: false
@@ -26,12 +26,6 @@ defaults:
     permalink: /:categories/:title/
     baseurl: ../../../
     categories: news
-- scope:
-    path: ''
-    type: alumnis
-  values:
-    baseurl: ../../../
-    categories: alumni
 - scope:
     path: ''
     type: distinguished_alumnis

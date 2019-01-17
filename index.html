@@ -64,7 +64,7 @@ EQUIVALENCY</h4></a>
           <div class="row action-cards__text-wrapper">
             <div class="col align-self-center">
               <h5 class="typography__h5 editable">
-                Some pleasant copy <br>about GED/HS equivalency.
+                High School Equivalency Prep gets you ready to take and pass a high school equivalency test, including the GED. Sessions begin every eight weeks. There is no cost to the student, and books are included.
               </h5>
             </div>
           </div>
@@ -83,7 +83,7 @@ LANGUAGE (ESL)</h4></a>
             <div class="row action-cards__text-wrapper">
               <div class="col align-self-center">
                 <h5 class="typography__h5 editable">
-                    Some also pleasant copy <br>about ESL.
+                    English as a Second Language (ESL) is a program to learn English or improve skills after growing up speaking a different language. It includes listening, speaking, reading and writing. There is no cost to the student.
                 </h5>
               </div>
             </div>
@@ -100,12 +100,72 @@ LANGUAGE (ESL)</h4></a>
 LITERACY</h4></a>
           <div class="row action-cards__text-wrapper">
             <div class="col align-self-center">
-              <h5 class="typography__h5 editable">Some wonderfull copy <br>about community literacy.</h5>
+              <h5 class="typography__h5 editable">The Community Literacy Project offers basic reading, writing, computation and English courses. Instruction and materials are provided at no cost to the student.</h5>
             </div>
           </div>
           <a target="_blank" href="https://form.jotform.com/82685340579973" class="btn btn-primary">Sign Up</a>
         </div>
       </div>
+  </div>
+</section>
+
+<section class="position__section--margin-top">
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top">
+        <h3 class="typography__red-h3">GED PROGRAM</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding position__col--img-overline">
+        <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding">
+        <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/ged-banner.jpg" title="" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="position__section--margin-top">
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top">
+        <h3 class="typography__red-h3">ADULT & COMMUNITY EDUCATION</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding position__col--img-overline">
+        <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding">
+        <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/adulted-banner.jpg" title="" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="position__section--margin-top">
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top">
+        <h3 class="typography__red-h3">LEARN ENGLISH AS A SECOND LANGUAGE (ESL)</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding position__col--img-overline">
+        <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding">
+        <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/esl-banner.jpg" title="" alt="" />
+      </div>
+    </div>
   </div>
 </section>
 
@@ -119,19 +179,18 @@ LITERACY</h4></a>
     <div class="row">
       <div class="col">
         <ol id="jsTeaseList" class="latest-news-widget__latest__tease-group">
-          {% assign sorted = site.alumnis | sort: 'year' | reverse %}
-          {% for alumni in sorted limit:4 %}
+          {% assign sorted = site.students | sort: 'order' | reverse %}
+          {% for student in sorted limit:4 %}
 
             <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
             <!--  Tease is active   -->
-              <a id="jsTeaseLink{{ forloop.index }}" class="latest-news-widget__latest__tease__link js-hp-latest-tease-link" href="{{ page.baseurl }}alumni/alumni-stories/#{{ alumni.name | replace: ' ', '-' | downcase }}" data-image="{{ alumni.portrait }}" data-image-alt="" tabindex="0" data-tease-type="" data-index="{{ forloop.index0 }}" aria-hidden="true">
-                <div class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default" style="background-image: url('{{ page.baseurl }}{{ alumni.portrait }}')">
+              <a id="jsTeaseLink{{ forloop.index }}" class="latest-news-widget__latest__tease__link js-hp-latest-tease-link" href="{{ page.baseurl }}alumni/alumni-stories/#{{ student.name | replace: ' ', '-' | downcase }}" data-image="{{ student.portrait }}" data-image-alt="" tabindex="0" data-tease-type="" data-index="{{ forloop.index0 }}" aria-hidden="true">
+                <div class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default" style="background-image: url('{{ page.baseurl }}{{ student.portrait }}')">
                 </div>
               <div class="latest-news-widget__latest__tease__hgroup">
-                <h3 class="typography__stories--quote editable">{{ alumni.quote }}</h3>
-                <h3 class="latest-news-widget__latest__tease__overline typography__latest-news-widget__rollup-list-h">&nbsp;-&nbsp;{{ alumni.name }}</h3>
+                <h3 class="typography__stories--quote editable">{{ student.quote }}</h3>
+                <h3 class="latest-news-widget__latest__tease__overline typography__latest-news-widget__rollup-list-h">&nbsp;-&nbsp;{{ student.name }}</h3>
               </div>
-              <p><button type="button" class="btn btn-primary alumni__btn">Read More</button></p>
             </a>
           </li>
 
@@ -176,11 +235,11 @@ LITERACY</h4></a>
           <div class="col-4 contacts__col--img"><img src="uploads/blank-contact.svg" alt="Photo of Dawn Graveline" class="img-fluid contacts__portrait modal-link editable" /></div>
           <!-- Coach 1 right info div (inner-right column) -->
           <div class="col-8 float-right">
-            <h5 class="typography__contacts--name editable">Dawn Graveline</h5>
-            <h6 class="typography__contacts--title editable">Manager&#160;I</h6>
+            <h5 class="typography__contacts--name editable">Gregg Beglau</h5>
+            <h6 class="typography__contacts--title editable">Coordinator of Student Support & Transition for High School Equivalency & ESL</h6>
             <p class="editable">
-                815-802-8252<br />
-                <a href="mailto:dgraveline@kcc.edu">dgraveline@kcc.edu</a>
+                815-802-8304<br />
+                <a href="mailto:gbeglau@kcc.edu">gbeglau@kcc.edu</a>
             </p>
           </div>
         </div>
@@ -192,11 +251,12 @@ LITERACY</h4></a>
           <div class="col-4 contacts__col--img"><img src="uploads/blank-contact.svg" alt="Photo of Marcia Papineau" class="img-fluid contacts__portrait modal-link editable" /></div>
           <!-- Coach 1 right info div (inner-right column) -->
           <div class="col-8 float-right">
-            <h5 class="typography__contacts--name editable">Marcia Papineau</h5>
-            <h6 class="typography__contacts--title editable">Specialist&#160;I</h6>
+            <h5 class="typography__contacts--name editable">Shannan Carrell</h5>
+             <h6 class="typography__contacts--title editable">Specialist III - ALIVE Literacy and Baby Talk Early Literacy Project<br>
+             Instructor - Adult Education</h6>
             <p class="editable">
-                815-802-8260<br />
-                <a href="mailto:mpapineau@kcc.edu​">mpapineau@kcc.edu​</a>
+                815-802-8307<br />
+                <a href="mailto:scarrell@kcc.edu">scarrell@kcc.edu</a>
             </p>
           </div>
         </div>
@@ -208,13 +268,11 @@ LITERACY</h4></a>
           <div class="col-4 contacts__col--img"><img src="uploads/blank-contact.svg" alt="Photo of Jennifer Zimmerman" class="img-fluid contacts__portrait modal-link editable" /></div>
           <!-- Coach 1 right info div (inner-right column) -->
           <div class="col-8 float-right">
-            <h5 class="typography__contacts--name editable">Jennifer Zimmerman</h5>
-            <h6 class="typography__contacts--title editable">Coordinator of Scholarships<br />
-            & Donor Relations
-          </h6>
+            <h5 class="typography__contacts--name editable">Liz East</h5>
+            <h6 class="typography__contacts--title editable">Administrative Assistant</h6>
             <p class="editable">
-                815-802-8251<br />
-                <a href="mailto:jzimmerman@kcc.edu">jzimmerman@kcc.edu</a>
+                815-802-8305<br />
+                <a href="mailto:least@kcc.edu">least@kcc.edu</a>
             </p>
           </div>
         </div>
