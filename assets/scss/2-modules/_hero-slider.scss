@@ -72,48 +72,28 @@
 }
 
 .hero-slider__slider--heading-container {   // div container for slide headings
-  margin-left: .5%;
-  padding-left: 5px;
-  position: absolute;
-  top: 55%;
-  width: 10%;
+  width: 100%;
+  position: relative;
   z-index: 4444;
-}
-
-@media screen and (min-width: 488px) {
-  .hero-slider__slider--heading-container {
-    top: 63%;
-    width: 10%;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .hero-slider__slider--heading-container {
-    top: 64%;
-    width: 10%;
-  }
+  bottom: 60px;
 }
 
 @media screen and (min-width: 768px) {
   .hero-slider__slider--heading-container {
-    padding-left: 10px;
-    top: 64.5%;
-    width: 10%;
+    bottom: 100px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .hero-slider__slider--heading-container {
-    padding-left: 20px;
-    top: 70%;
-    width: 10%;
+    bottom: 100px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero-slider__slider--heading-container {
-    top: 71%;
-    width: 10%;
+    bottom: 105px;
+    width: 100%;
   }
 }
 
