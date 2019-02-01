@@ -7,27 +7,11 @@ $(document).ready(function() {
   var noBase = noProto.replace('foundation.kcc.edu/', '');
 
   function writeSubNav() {
-    var about = 'about',
-      board = 'foundation-board';
 
-    var scholar = 'scholarships',
-      century = 'century-scholars',
-      create = 'create-a-scholarship';
-
-    var give = 'give',
-      employee = 'employee-giving',
-      planned = 'planned-giving',
-      presidents = 'presidents-circle',
-      womens = 'womens-giving-circle';
-
-    var events = 'events',
-      annual = 'annual-scholarship-event',
-      presidentsDinner = 'presidents-circle-dinner',
-      fundraiser = 'annual-fundraiser';
-
-    var alumni = 'alumni',
-      distinguished = 'distinguished-alumni-award',
-      stories = 'alumni-stories';
+    var programs = 'programs',
+      ged = 'ged',
+      esl = 'esl',
+      literacy = 'community-literacy';
 
     //console.log(noProto);
 
@@ -39,6 +23,7 @@ $(document).ready(function() {
         // Links:
         linkStart = '<a href="',
         linkPostUrl = '" class="nav-link sub-nav__nav-link" style="text-transform: capitalize;">',
+        linkCaps = '" class="nav-link sub-nav__nav-link" style="text-transform: uppercase;">',
         linkClose = '</a>',
         srCurrent = ' <span class="sr-only">(current)</span>';
 
@@ -51,177 +36,46 @@ $(document).ready(function() {
       //console.log(lastItem);
       //console.log(arrayLength);
 
-      if ( noBase.indexOf(about) > -1 ) {
-        if ( noBase.indexOf(board) > -1 ) {
+      if ( noBase.indexOf(programs) > -1 ) {
+        if ( noBase.indexOf(ged) > -1 ) {
           listString.push(
-            lastListItemStart + linkStart + '../' + board + linkPostUrl + board.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
+            lastListItemStart + linkStart + '../' + ged + linkCaps + ged.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
+          );
+          listString.push(
+            listItemStart + linkStart + '../' + esl + linkCaps + esl.replace(/-/g, ' ') + linkClose + listItemClose
+          );
+          listString.push(
+            listItemStart + linkStart + '../' + literacy + linkPostUrl + literacy.replace(/-/g, ' ') + linkClose + listItemClose
+          );
+        } else if ( noBase.indexOf(esl) > -1 ) {
+          listString.push(
+            listItemStart + linkStart + '../' + ged + linkCaps + ged.replace(/-/g, ' ') + linkClose + listItemClose
+          );
+          listString.push(
+            lastListItemStart + linkStart + '../' + esl + linkCaps + esl.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
+          );
+          listString.push(
+            listItemStart + linkStart + '../' + literacy + linkPostUrl + literacy.replace(/-/g, ' ') + linkClose + listItemClose
+          );
+        } else if ( noBase.indexOf(literacy) > -1 ) {
+          listString.push(
+            listItemStart + linkStart + '../' + ged + linkCaps + ged.replace(/-/g, ' ') + linkClose + listItemClose
+          );
+          listString.push(
+            listItemStart + linkStart + '../' + esl + linkCaps + esl.replace(/-/g, ' ') + linkClose + listItemClose
+          );
+          listString.push(
+            lastListItemStart + linkStart + '../' + literacy + linkPostUrl + literacy.replace(/-/g, ' ') + linkClose + listItemClose
           );
         } else {
           listString.push(
-            listItemStart + linkStart + board + linkPostUrl + board.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-        }
-      }
-
-      else if ( noBase.indexOf(scholar) > -1 ) {
-        if ( noBase.indexOf(century) > -1 ) {
-          listString.push(
-            lastListItemStart + linkStart + '../' + century + linkPostUrl + century.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
+            listItemStart + linkStart + ged + linkCaps + ged.replace(/-/g, ' ') + linkClose + listItemClose
           );
           listString.push(
-            listItemStart + linkStart + '../' + create + linkPostUrl + create.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-        } else if ( noBase.indexOf(create) > -1 ) {
-          listString.push(
-            listItemStart + linkStart + '../' + century + linkPostUrl + century.replace(/-/g, ' ') + linkClose + listItemClose
+            listItemStart + linkStart + esl + linkCaps + esl.replace(/-/g, ' ') + linkClose + listItemClose
           );
           listString.push(
-            lastListItemStart + linkStart + '../' + create + linkPostUrl + create.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
-          );
-        } else {
-          listString.push(
-            listItemStart + linkStart + century + linkPostUrl + century.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + create + linkPostUrl + create.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-        }
-      }
-
-      else if ( noBase.indexOf(give) > -1 ) {
-        if ( noBase.indexOf(employee) > -1 ) {
-          listString.push(
-            lastListItemStart + linkStart + '../' + employee + linkPostUrl + employee.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + planned + linkPostUrl + planned.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + presidents + linkPostUrl + presidents.replace(/-/g, ' ').replace("ts", "t's") + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + womens + linkPostUrl + womens.replace(/-/g, ' ').replace("ns", "n's") + linkClose + listItemClose
-          );
-        } else if ( noBase.indexOf(planned) > -1 ) {
-          listString.push(
-            listItemStart + linkStart + '../' + employee + linkPostUrl + employee.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            lastListItemStart + linkStart + '../' + planned + linkPostUrl + planned.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + presidents + linkPostUrl + presidents.replace(/-/g, ' ').replace("ts", "t's")  + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + womens + linkPostUrl + womens.replace(/-/g, ' ').replace("ns", "n's") + linkClose + listItemClose
-          );
-        } else if ( noBase.indexOf(presidents) > -1 ) {
-          listString.push(
-            listItemStart + linkStart + '../' + employee + linkPostUrl + employee.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + planned + linkPostUrl + planned.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            lastListItemStart + linkStart + '../' + presidents + linkPostUrl + presidents.replace(/-/g, ' ').replace("ts", "t's")  + srCurrent + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + womens + linkPostUrl + womens.replace(/-/g, ' ').replace("ns", "n's") + linkClose + listItemClose
-          );
-        } else if ( noBase.indexOf(womens) > -1 ) {
-          listString.push(
-            listItemStart + linkStart + '../' + employee + linkPostUrl + employee.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + planned + linkPostUrl + planned.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + presidents + linkPostUrl + presidents.replace(/-/g, ' ').replace("ts", "t's")  + linkClose + listItemClose
-          );
-          listString.push(
-            lastListItemStart + linkStart + '../' + womens + linkPostUrl + womens.replace(/-/g, ' ').replace("ns", "n's") + srCurrent + linkClose + listItemClose
-          );
-        } else {
-          listString.push(
-            listItemStart + linkStart + employee + linkPostUrl + employee.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + planned + linkPostUrl + planned.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + presidents + linkPostUrl + presidents.replace(/-/g, ' ').replace("ts", "t's")  + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + womens + linkPostUrl + womens.replace(/-/g, ' ').replace("ns", "n's") + linkClose + listItemClose
-          );
-        }
-      }
-
-      else if ( noBase.indexOf(alumni) > -1 ) {
-        if ( noBase.indexOf(distinguished) > -1 ) {
-          listString.push(
-            lastListItemStart + linkStart + '../' + distinguished + linkPostUrl + distinguished.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + stories + linkPostUrl + stories.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-        } else if ( noBase.indexOf(stories) > -1 ) {
-          listString.push(
-            listItemStart + linkStart + '../' + distinguished + linkPostUrl + distinguished.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            lastListItemStart + linkStart + '../' + stories + linkPostUrl + stories.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
-          );
-        } else {
-          listString.push(
-            listItemStart + linkStart + distinguished + linkPostUrl + distinguished.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + stories + linkPostUrl + stories.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-        }
-      }
-
-      else if ( noBase.indexOf(events) > -1 ) {
-        if ( noBase.indexOf(annual) > -1 ) {
-          listString.push(
-            lastListItemStart + linkStart + '../' + annual + linkPostUrl + annual.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + presidentsDinner + linkPostUrl + presidentsDinner.replace(/-/g, ' ').replace("ts", "t's")  + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + fundraiser + linkPostUrl + fundraiser.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-        } else if ( noBase.indexOf(presidentsDinner) > -1 ) {
-          listString.push(
-            listItemStart + linkStart + '../' + annual + linkPostUrl + annual.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            lastListItemStart + linkStart + '../' + presidentsDinner + linkPostUrl + presidentsDinner.replace(/-/g, ' ').replace("ts", "t's")  + srCurrent + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + fundraiser + linkPostUrl + fundraiser.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-        } else if ( noBase.indexOf(fundraiser) > -1 ) {
-          listString.push(
-            listItemStart + linkStart + '../' + annual + linkPostUrl + annual.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + '../' + presidentsDinner + linkPostUrl + presidentsDinner.replace(/-/g, ' ').replace("ts", "t's")  + linkClose + listItemClose
-          );
-          listString.push(
-            lastListItemStart + linkStart + '../' + fundraiser + linkPostUrl + fundraiser.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
-          );
-        } else {
-          listString.push(
-            listItemStart + linkStart + annual + linkPostUrl + annual.replace(/-/g, ' ') + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + presidentsDinner + linkPostUrl + presidentsDinner.replace(/-/g, ' ').replace("ts", "t's")  + linkClose + listItemClose
-          );
-          listString.push(
-            listItemStart + linkStart + fundraiser + linkPostUrl + fundraiser.replace(/-/g, ' ') + linkClose + listItemClose
+            listItemStart + linkStart + literacy + linkPostUrl + literacy.replace(/-/g, ' ') + linkClose + listItemClose
           );
         }
       }
@@ -231,7 +85,7 @@ $(document).ready(function() {
 
   }
 
-  if ( noProto !== 'foundation.kcc.edu/' && noProto !== 'foundation.kcc.edu/#contact' && noProto !== 'localhost:3000/' && noProto !== 'localhost:3000/#contact' ) {
+  if ( noProto !== 'adulted.kcc.edu/' && noProto !== 'adulted.kcc.edu/#contact' && noProto !== 'localhost:3000/' && noProto !== 'localhost:3000/#contact' ) {
     writeSubNav();
   }
 });
