@@ -179,7 +179,7 @@ LITERACY</h4></a>
     <div class="row">
       <div class="col">
         <ol id="jsTeaseList" class="latest-news-widget__latest__tease-group">
-          {% assign sorted = site.students | sort: 'order' | reverse %}
+          {% assign sorted = site.students | sort: 'order' %}
           {% for student in sorted limit:4 %}
 
             <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
