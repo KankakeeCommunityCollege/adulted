@@ -2,21 +2,12 @@ title: "Kankakee Community College"
 url: https://foundation.kcc.edu
 google_analytics_key: UA-4328282-19
 collections:
-  photos:
-    output: false
-  distinguished_alumnis:
-    output: false
   students:
     output: false
   posts:
     output: false
     _hide_content: true
 defaults:
-- scope:
-    path: ''
-    type: photos
-  values:
-    baseurl: ../../
 - scope:
     path: ''
     type: posts
@@ -26,12 +17,6 @@ defaults:
     permalink: /:categories/:title/
     baseurl: ../../../
     categories: news
-- scope:
-    path: ''
-    type: distinguished_alumnis
-  values:
-    baseurl: ../../../
-    categories: distinguished_alumnis
 permalink: pretty
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
