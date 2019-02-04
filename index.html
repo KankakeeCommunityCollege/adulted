@@ -55,11 +55,11 @@ slides:
       <div class="row">
         <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--scholarships">
           <div class="action-cards__svg--wrapper">
-            <a href="{{ page.baseurl }}scholarships/">
+            <a href="{{ page.baseurl }}programs/ged/">
               {% include mortarboard.html %}
             </a>
           </div>
-          <a class="links__no-underline" href="{{ page.baseurl }}scholarships/"><h4 class="typography__orange-h4">GED<sup>&reg;</sup>/HIGH SCHOOL
+          <a class="links__no-underline" href="{{ page.baseurl }}programs/ged/"><h4 class="typography__orange-h4">GED<sup>&reg;</sup>/HIGH SCHOOL
 EQUIVALENCY</h4></a>
           <div class="row action-cards__text-wrapper">
             <div class="col align-self-center">
@@ -68,17 +68,16 @@ EQUIVALENCY</h4></a>
               </h5>
             </div>
           </div>
-            <a href="{{ page.baseurl }}scholarships" id="viewScholarships" class="btn btn-primary {% if page.scholarships_available == true %}action-cards__scholarships--hide-button{% endif %}">View Scholarships</a>
-            <a href="{{ page.baseurl }}scholarships" id="applyNow" class="btn btn-primary {% if page.scholarships_available == false %}action-cards__scholarships--hide-button{% endif %}">Apply Now</a>
+          <a href="{{ page.baseurl }}programs/ged/" class="btn btn-primary">More Info</a>
         </div>
         <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--give">
           <div class="impact__give">
             <div class="action-cards__svg--wrapper">
-              <a href="{{ page.baseurl }}give/">
+              <a href="{{ page.baseurl }}programs/esl/">
                 {% include chat-bubbles.html %}
               </a>
             </div>
-            <a href="{{ page.baseurl }}give/" class="links__no-underline"><h4 class="typography__orange-h4">ENGLISH SECOND
+            <a href="{{ page.baseurl }}programs/esl/" class="links__no-underline"><h4 class="typography__orange-h4">ENGLISH SECOND
 LANGUAGE (ESL)</h4></a>
             <div class="row action-cards__text-wrapper">
               <div class="col align-self-center">
@@ -87,23 +86,23 @@ LANGUAGE (ESL)</h4></a>
                 </h5>
               </div>
             </div>
-              <a href="{{ page.baseurl }}give/" class="btn btn-primary">Give Now</a>
+              <a href="{{ page.baseurl }}programs/esl/" class="btn btn-primary">More Info</a>
           </div>
         </div>
         <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--volunteer">
           <div class="action-cards__svg--wrapper">
-            <a href="#">
+            <a href="{{ page.baseurl }}programs/community-literacy/">
               {% include books.html %}
             </a>
           </div>
-          <a href="#" class="links__no-underline"><h4 class="typography__orange-h4">COMMUNITY <br>
+          <a href="{{ page.baseurl }}programs/community-literacy/" class="links__no-underline"><h4 class="typography__orange-h4">COMMUNITY <br>
 LITERACY</h4></a>
           <div class="row action-cards__text-wrapper">
             <div class="col align-self-center">
               <h5 class="typography__h5 editable">The Community Literacy Project offers basic reading, writing, computation and English courses. Instruction and materials are provided at no cost to the student.</h5>
             </div>
           </div>
-          <a target="_blank" href="https://form.jotform.com/82685340579973" class="btn btn-primary">Sign Up</a>
+          <a href="{{ page.baseurl }}programs/community-literacy/" class="btn btn-primary">More Info</a>
         </div>
       </div>
   </div>
@@ -122,8 +121,9 @@ LITERACY</h4></a>
       </div>
     </div>
     <div class="row">
-      <div class="col position__col--no-padding">
+      <div class="col position__col--no-padding text-center">
         <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/ged-banner.jpg" title="" alt="" />
+        <a href="{{ page.baseurl }}" class="btn btn-info position__img-btn">Enroll Now</a>
       </div>
     </div>
   </div>
@@ -142,8 +142,9 @@ LITERACY</h4></a>
       </div>
     </div>
     <div class="row">
-      <div class="col position__col--no-padding">
-        <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/adulted-banner.jpg" title="" alt="" />
+      <div class="col position__col--no-padding text-center">
+        <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/tutor-banner.jpg" title="" alt="" />
+        <a href="{{ page.baseurl }}" class="btn btn-info position__img-btn">Learn More</a>
       </div>
     </div>
   </div>
@@ -162,8 +163,9 @@ LITERACY</h4></a>
       </div>
     </div>
     <div class="row">
-      <div class="col position__col--no-padding">
+      <div class="col position__col--no-padding text-center">
         <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/esl-banner.jpg" title="" alt="" />
+        <a href="{{ page.baseurl }}" class="btn btn-info position__img-btn">Enroll Now</a>
       </div>
     </div>
   </div>
@@ -183,15 +185,14 @@ LITERACY</h4></a>
           {% for student in sorted limit:4 %}
 
             <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
-            <!--  Tease is active   -->
-              <a id="jsTeaseLink{{ forloop.index }}" class="latest-news-widget__latest__tease__link js-hp-latest-tease-link" href="{{ page.baseurl }}alumni/alumni-stories/#{{ student.name | replace: ' ', '-' | downcase }}" data-image="{{ student.portrait }}" data-image-alt="" tabindex="0" data-tease-type="" data-index="{{ forloop.index0 }}" aria-hidden="true">
+              <div id="jsTeaseLink{{ forloop.index }}" class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center" href="{{ page.baseurl }}alumni/alumni-stories/#{{ student.name | replace: ' ', '-' | downcase }}" data-image="{{ student.portrait }}" data-image-alt="" tabindex="0" data-tease-type="" data-index="{{ forloop.index0 }}" aria-hidden="true">
                 <div class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default" style="background-image: url('{{ page.baseurl }}{{ student.portrait }}')">
                 </div>
               <div class="latest-news-widget__latest__tease__hgroup">
                 <h3 class="typography__stories--quote editable">{{ student.quote }}</h3>
                 <h3 class="latest-news-widget__latest__tease__overline typography__latest-news-widget__rollup-list-h">&nbsp;-&nbsp;{{ student.name }}</h3>
               </div>
-            </a>
+            </div>
           </li>
 
           {% endfor %}

@@ -44,3 +44,8 @@ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,
 ul.nav.nav-tabs {
   margin-bottom: 20px;
 }
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: $hover-grey;
+}
