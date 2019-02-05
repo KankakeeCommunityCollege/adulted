@@ -269,7 +269,6 @@ p.general-p {
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 .typography__red-h3--margin-btm {
@@ -278,6 +277,10 @@ p.general-p {
 
 .typography__red-h3--tan--margin-btm{
   margin-bottom: 21px;
+}
+
+.typography__upper {
+  text-transform: uppercase;
 }
 
 .typography__col--heading-underline {
