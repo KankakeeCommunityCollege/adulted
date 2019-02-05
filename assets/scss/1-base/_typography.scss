@@ -174,12 +174,12 @@ p.general-p {
   text-transform: uppercase;
 }
 
-.typography__newsroom-main-heading {
+.typography__local-nav--main-heading {
   align-self: center;
   color: $primary-blue;
   display: inline;
   font-family: eurostile,sans-serif;
-  font-size: 1.5rem;
+  font-size: .85rem;
   font-style: italic;
   font-weight: 700;
   text-transform: uppercase;
@@ -194,31 +194,31 @@ p.general-p {
 }
 
 @media screen and (min-width:360px) {
-  .typography__newsroom-main-heading {
-    font-size: 1.8rem;
+  .typography__local-nav--main-heading {
+    font-size: 1rem;
   }
 }
 
 @media screen and (min-width:410px) {
-  .typography__newsroom-main-heading {
-    font-size: 2rem;
+  .typography__local-nav--main-heading {
+    font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width:576px) {
-  .typography__newsroom-main-heading {
-    font-size: 2.3rem;
+  .typography__local-nav--main-heading {
+    font-size: 1.6rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .typography__newsroom-main-heading {
-    font-size: 2.4rem;
+  .typography__local-nav--main-heading {
+    font-size: 1.65rem;
   }
 }
 
 @media screen and (min-width: 1500px) {
-  .typography__newsroom-main-heading {
+  .typography__local-nav--main-heading {
     font-size: 2.6rem;
   }
 }
