@@ -1,6 +1,7 @@
 // Javascript to enable links/external-links to Bootstrap4 tab-nav's
 // This provides a way to link to individual alumni stories and have that desired story active on the alumni-stories page when you get there.
 $(document).ready(function() {
+
   var deferScroll = $.Deferred();
 
   $.when(deferScroll).done(function() {
