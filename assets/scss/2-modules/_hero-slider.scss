@@ -74,41 +74,28 @@
 
 .hero-slider__slider--heading-container {   // div container for slide headings
   position: absolute;
-  top: 55%;
+  top: 69%;
+  width: 100%;
+  padding-left: 6%;
+  padding-right: 6%;
   z-index: 4444;
 }
 
 @media screen and (min-width: 488px) {
   .hero-slider__slider--heading-container {
-    top: 63%;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .hero-slider__slider--heading-container {
-    top: 64%;
+    top: 71%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero-slider__slider--heading-container {
-    top: 64.5%;
-    width: 720px;
+    top: 69%;
   }
 }
 
 @media screen and (min-width: 992px) {
   .hero-slider__slider--heading-container {
-    padding-left: 20px;
-    top: 70%;
-    width: 960px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero-slider__slider--heading-container {
-    top: 71%;
-    width: 1140px;
+    top: 75%;
   }
 }
 
@@ -203,4 +190,8 @@
 
 .hero-slider__heading--inner {
   width: 100%
+}
+
+.slick-slide {
+  position: relative;
 }
