@@ -31,14 +31,18 @@ slides:
           <div>
             <a href="{{ slide.url }}"><img src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
             <div class="hero-slider__slider--heading-container text-center">
-              <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
+              <div class="hero-slider__heading--inner">
+                <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
+              </div>
             </div>
           </div>
           {% else %}
           <div>
             <a href="{{ slide.url }}"><img src="assets/img/placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
             <div class="hero-slider__slider--heading-container text-center">
-              <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
+                <div class="hero-slider__heading--inner">
+                  <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
+                </div>
             </div>
           </div>
           {% endif %}

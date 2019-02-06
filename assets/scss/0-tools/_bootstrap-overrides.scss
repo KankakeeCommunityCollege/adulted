@@ -49,3 +49,14 @@ ul.nav.nav-tabs {
 .dropdown-item:hover {
   background-color: $hover-grey;
 }
+
+// Make links darker for more visual-contrast to meet accessibility requirements
+// (bootstrap's default blue is not dark enough)
+a {
+  color: $link-blue;
+}
+
+// Make bootstrap .btn-primary blue color darker for more visual-contrast accessibility requirements
+.btn-primary {
+  background-color: $link-blue;
+}
