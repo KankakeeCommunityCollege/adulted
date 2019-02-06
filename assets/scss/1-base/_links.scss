@@ -52,3 +52,7 @@
 .links__no-underline:hover {
   text-decoration: none !important;
 }
+
+.links__darker-link {
+  color: $darker-link-blue;
+}
