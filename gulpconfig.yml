@@ -101,7 +101,7 @@ javascript:
   src:
     # Exclusions: (!exclaim to exclude)
     # Inclusions: (included in JS compile)
-    - "assets/js/script/test.js" # test js file
+    - "!assets/js/script/test.js" # test js file
     - "!assets/js/script/breadcrumb.js"
     - "assets/js/script/sliders.js"
     - "assets/js/script/lazyLoad.js"
@@ -119,6 +119,7 @@ javascript:
     - "assets/js/script/bootstrapTabs.js"
     - "assets/js/script/footerDate.js"
     - "assets/js/script/tabsInit.js"
+    - "assets/js/script/translate.js"
 
 tableScript:
   dest:
