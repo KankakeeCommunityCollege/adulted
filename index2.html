@@ -1,0 +1,283 @@
+---
+layout: default
+baseurl:
+title: Adult & Community Education
+description: >-
+  Kankakee community college is the largest provider of high school equivalency,
+  English as a second language (ESL), and other pre-college remedial services in
+  the Kankakee and Iroquois County area.
+scholarships_available: true
+slides:
+  - image: uploads/hero-1.jpg
+    alt-text: Complete Your GED at KCC.
+    url: 'https://adulted.kcc.edu/programs/ged/'
+    text: Complete Your GED at KCC.
+  - image: uploads/hero-2.jpg
+    alt-text: Improve Your English Language Skills.
+    url: 'https://adulted.kcc.edu/programs/esl/'
+    text: Learn English Free.
+  - image: uploads/hero-3_20181206_103340.jpg
+    alt-text: Become a Tutor. Make a Difference.
+    url: 'https://adulted.kcc.edu/programs/community-literacy/'
+    text: Become&nbsp;a&nbsp;Tutor. Make&nbsp;a&nbsp;Difference.
+---
+
+<section class="position__offset-fixed-nav">
+    <div class="container container--tan-bg">
+      <div class="row">
+        <div class="col-md-12 hero-slider__slider">
+        {% for slide in page.slides %}
+          {% if forloop.first == true %}
+          <div>
+            <a href="{{ slide.url }}"><img src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
+            <div class="hero-slider__slider--heading-container text-center">
+              <div class="hero-slider__heading--inner">
+                <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
+              </div>
+            </div>
+          </div>
+          {% else %}
+          <div>
+            <a href="{{ slide.url }}"><img src="assets/img/placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
+            <div class="hero-slider__slider--heading-container text-center">
+                <div class="hero-slider__heading--inner">
+                  <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
+                </div>
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center"><h2 class="red-heading editable">Programs</h2></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--scholarships">
+          <div class="action-cards__svg--wrapper">
+            <a href="{{ page.baseurl }}programs/ged/" aria-label="link to GED page">
+              {% include mortarboard.html %}
+            </a>
+          </div>
+          <a class="links__no-underline" href="{{ page.baseurl }}programs/ged/"><h4 class="typography__orange-h4 typography__sm-sup">GED<sup>&reg;</sup>/HiSET<sup>&reg;</sup></h4></a>
+          <div class="row action-cards__text-wrapper">
+            <div class="col d-flex align-items-center position__col--min-height">
+              <h5 class="typography__h5 editable">
+                  High School Equivalency Prep gets you ready to take and pass a high school equivalency test (HSE), including the GED and HiSET. Sessions begin throughout the year. Classes are free and books are provided during class time.
+              </h5>
+            </div>
+          </div>
+          <a href="{{ page.baseurl }}programs/ged/" class="btn btn-primary">Learn More</a>
+        </div>
+        <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--give">
+          <div class="impact__give">
+            <div class="action-cards__svg--wrapper">
+              <a href="{{ page.baseurl }}programs/esl/" aria-label="link to ESL page">
+                {% include chat-bubbles.html %}
+              </a>
+            </div>
+            <a href="{{ page.baseurl }}programs/esl/" class="links__no-underline"><h4 class="typography__orange-h4">ESL</h4></a>
+            <div class="row action-cards__text-wrapper">
+              <div class="col d-flex align-items-center position__col--min-height">
+                <h5 class="typography__h5 editable">
+                    English as a Second Language (ESL) classes teach English to non-native speakers. It includes listening, speaking, reading and writing. Classes are free and books are provided during class time.
+                </h5>
+              </div>
+            </div>
+              <a href="{{ page.baseurl }}programs/esl/" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--volunteer">
+          <div class="action-cards__svg--wrapper">
+            <a href="{{ page.baseurl }}programs/community-literacy/" aria-label="link to community literacy page">
+              {% include books.html %}
+            </a>
+          </div>
+          <a href="{{ page.baseurl }}programs/community-literacy/" class="links__no-underline"><h4 class="typography__orange-h4">LITERACY</h4></a>
+          <div class="row action-cards__text-wrapper">
+            <div class="col d-flex align-items-center position__col--min-height">
+              <h5 class="typography__h5 editable">
+                  The literacy program provides volunteer tutors to help struggling readers with foundational skills in reading, writing and math. There is no cost to the student. Accepting volunteer applications.
+              </h5>
+            </div>
+          </div>
+          <a href="{{ page.baseurl }}programs/community-literacy/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="position__section--margin-top">
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top">
+        <h3 class="typography__red-h3 typography__sm-sup">GED<sup>&reg;</sup>/HiSET<sup>&reg;</sup> PROGRAM</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding position__col--img-overline">
+        <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding text-center">
+        <a href="{{ page.baseurl }}programs/ged/" aria-label="link to GED page">
+          <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/ged-banner.jpg" alt="Free high school equivalency classes! Several locations are available. GED graduates on average, earn $2,040 more." title="Free high school equivalency classes! Several locations are available. GED graduates on average, earn $2,040 more." />
+        </a>
+        <a href="{{ page.baseurl }}programs/ged/" class="btn btn-primary position__img-btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="position__section--margin-top">
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top">
+        <h3 class="typography__red-h3 typography__upper">Literacy Program - Volunteers Needed</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding position__col--img-overline">
+        <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding text-center">
+        <a href="{{ page.baseurl }}programs/community-literacy/#volunteer" aria-label="link to the Community Literacy volunteering page">
+          <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/tutor-banner.jpg" alt="Become a tutor! Tutor adults in reading, writing, math, and English." title="Become a tutor! Tutor adults in reading, writing, math, and English." />
+        </a>
+        <a href="{{ page.baseurl }}programs/community-literacy/#volunteer" class="btn btn-primary position__img-btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="position__section--margin-top">
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top">
+        <h3 class="typography__red-h3 typography__upper">ENGLISH AS A SECOND LANGUAGE (ESL) Program</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding position__col--img-overline">
+        <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding text-center">
+        <a href="{{ page.baseurl }}programs/esl/" aria-label="link to the ESL page">
+          <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/esl-banner.jpg" alt="Learn english free! Classes offered in Kankakee, Watseka, & Momence." title="Learn english free! Classes offered in Kankakee, Watseka, & Momence." />
+        </a>
+        <a href="{{ page.baseurl }}programs/esl/" class="btn btn-primary position__img-btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top typography__col--heading-underline">
+        <h3 class="typography__red-h3 typography__red-h3--margin-btm">Student Testimonials</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ol id="jsTeaseList" class="latest-news-widget__latest__tease-group">
+          {% assign sorted = site.students | sort: 'order' %}
+          {% for student in sorted limit:4 %}
+
+            <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
+              <div id="jsTeaseLink{{ forloop.index }}" class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center" href="{{ page.baseurl }}alumni/alumni-stories/#{{ student.name | replace: ' ', '-' | downcase }}" data-image="{{ student.portrait }}" data-image-alt="" tabindex="0" data-tease-type="" data-index="{{ forloop.index0 }}" aria-hidden="true">
+                <div class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default" style="background-image: url('{{ page.baseurl }}{{ student.portrait }}')">
+                </div>
+              <div class="latest-news-widget__latest__tease__hgroup">
+                <h3 class="typography__stories--quote">{{ student.quote }}</h3>
+                <h3 class="latest-news-widget__latest__tease__overline typography__latest-news-widget__rollup-list-h notranslate">&nbsp;-&nbsp;{{ student.name }}</h3>
+              </div>
+            </div>
+          </li>
+
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+    </div>
+
+</section>
+
+<section class="contacts__section-margin">
+  <div class="container">
+    <div class="row">
+      <div class="col typography__col--heading-underline-tan">
+        <h3 id="contact" name="contact" class="typography__red-h3 typography__red-h3--tan--margin-btm">Contacts</h3>
+      </div>
+    </div>
+  </div>
+  <div class="container contacts__padding-top contacts__padding-left container--tan-bg">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 contacts__col-bottom-margin">
+        <!-- Coach 1 row -->
+        <div class="row">
+          <!-- Coach 1 left image div (inner-left column) -->
+          <div class="col-4 contacts__col--img"><img src="uploads/blank-contact.svg" data-src="assets/img/mwolf.jpg" alt="Photo of Margaret Wolf" class="img-fluid contacts__portrait modal-link editable" /></div>
+          <!-- Coach 1 right info div (inner-right column) -->
+          <div class="col-8 float-right">
+            <h5 class="typography__contacts--name notranslate editable">Margaret Wolf</h5>
+            <h6 class="typography__contacts--title editable">Director of Adult and Community Education</h6>
+            <p class="editable">
+                <a href="tel:18158028300">815-802-8300</a><br /><a class="links__darker-link" href="https://form.jotform.com/90435102482954?submitEmail=mwolf%40kcc.edu">Email</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 contacts__col-bottom-margin">
+        <!-- Coach 1 row -->
+        <div class="row">
+          <!-- Coach 1 left image div (inner-left column) -->
+          <div class="col-4 contacts__col--img"><img src="uploads/blank-contact.svg" data-src="assets/img/gbeglau.jpg" alt="Photo of Greg Beglau" class="img-fluid contacts__portrait modal-link editable" /></div>
+          <!-- Coach 1 right info div (inner-right column) -->
+          <div class="col-8 float-right">
+            <h5 class="typography__contacts--name notranslate editable">Gregg Beglau</h5>
+            <h6 class="typography__contacts--title editable">Coordinator of Student Support & Transition for High School Equivalency & ESL</h6>
+            <p class="editable">
+                <a href="tel:18158028300">815-802-8300</a><br /><a class="links__darker-link" href="https://form.jotform.com/90435102482954?submitEmail=gbeglau%40kcc.edu">Email</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 contacts__col-bottom-margin">
+        <!-- Coach 1 row -->
+        <div class="row">
+          <!-- Coach 1 left image div (inner-left column) -->
+          <div class="col-4 contacts__col--img"><img src="uploads/blank-contact.svg" data-src="assets/img/scarrell.jpg" alt="Photo of Shannan Carrell" class="img-fluid contacts__portrait modal-link editable" /></div>
+          <!-- Coach 1 right info div (inner-right column) -->
+          <div class="col-8 float-right">
+            <h5 class="typography__contacts--name notranslate editable">Shannan Carrell</h5>
+             <h6 class="typography__contacts--title editable">Specialist III - ALIVE Literacy and Baby Talk Early Literacy Project</h6>
+            <p class="editable">
+                <a href="tel:18158028300">815-802-8300</a><br /><a class="links__darker-link" href=https://form.jotform.com/90435102482954?submitEmail=scarrell%40kcc.edu">Email</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 contacts__col-bottom-margin">
+        <!-- Coach 1 row -->
+        <div class="row">
+          <!-- Coach 1 left image div (inner-left column) -->
+          <div class="col-4 contacts__col--img"><img src="uploads/blank-contact.svg" data-src="assets/img/least.jpg" alt="Photo of Liz East" class="img-fluid contacts__portrait modal-link editable" /></div>
+          <!-- Coach 1 right info div (inner-right column) -->
+          <div class="col-8 float-right">
+            <h5 class="typography__contacts--name notranslate editable">Liz East</h5>
+            <h6 class="typography__contacts--title editable">Administrative Assistant</h6>
+            <p class="editable">
+                <a href="tel:18158028300">815-802-8300</a><br /><a class="links__darker-link" href="https://form.jotform.com/90435102482954?submitEmail=least%40kcc.edu">Email</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
