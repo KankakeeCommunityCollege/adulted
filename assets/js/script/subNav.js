@@ -9,9 +9,10 @@ $(document).ready(function() {
   function writeSubNav() {
 
     var programs = 'programs',
-      ged = 'ged',
       esl = 'esl',
-      literacy = 'community-literacy';
+      literacy = 'community-literacy',
+      ged = 'ged',
+      hse = 'GED/HiSet';
 
     //console.log(noProto);
 
@@ -24,6 +25,7 @@ $(document).ready(function() {
         linkStart = '<a href="',
         linkPostUrl = '" class="nav-link sub-nav__nav-link" style="text-transform: capitalize;">',
         linkCaps = '" class="nav-link sub-nav__nav-link" style="text-transform: uppercase;">',
+        linkNoStyle = '" class="nav-link sub-nav__nav-link">',
         linkClose = '</a>',
         srCurrent = ' <span class="sr-only">(current)</span>';
 
@@ -39,7 +41,7 @@ $(document).ready(function() {
       if ( noBase.indexOf(programs) > -1 ) {
         if ( noBase.indexOf(ged) > -1 ) {
           listString.push(
-            lastListItemStart + linkStart + '../' + ged + linkCaps + ged.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
+            lastListItemStart + linkStart + '../' + ged + linkNoStyle + hse + srCurrent + linkClose + listItemClose
           );
           listString.push(
             listItemStart + linkStart + '../' + esl + linkCaps + esl.replace(/-/g, ' ') + linkClose + listItemClose
@@ -49,7 +51,7 @@ $(document).ready(function() {
           );
         } else if ( noBase.indexOf(esl) > -1 ) {
           listString.push(
-            listItemStart + linkStart + '../' + ged + linkCaps + ged.replace(/-/g, ' ') + linkClose + listItemClose
+            listItemStart + linkStart + '../' + ged + linkNoStyle + hse + linkClose + listItemClose
           );
           listString.push(
             lastListItemStart + linkStart + '../' + esl + linkCaps + esl.replace(/-/g, ' ') + srCurrent + linkClose + listItemClose
@@ -59,7 +61,7 @@ $(document).ready(function() {
           );
         } else if ( noBase.indexOf(literacy) > -1 ) {
           listString.push(
-            listItemStart + linkStart + '../' + ged + linkCaps + ged.replace(/-/g, ' ') + linkClose + listItemClose
+            listItemStart + linkStart + '../' + ged + linkNoStyle + hse + linkClose + listItemClose
           );
           listString.push(
             listItemStart + linkStart + '../' + esl + linkCaps + esl.replace(/-/g, ' ') + linkClose + listItemClose
@@ -69,7 +71,7 @@ $(document).ready(function() {
           );
         } else {
           listString.push(
-            listItemStart + linkStart + ged + linkCaps + ged.replace(/-/g, ' ') + linkClose + listItemClose
+            listItemStart + linkStart + ged + linkNoStyle + hse + linkClose + listItemClose
           );
           listString.push(
             listItemStart + linkStart + esl + linkCaps + esl.replace(/-/g, ' ') + linkClose + listItemClose
