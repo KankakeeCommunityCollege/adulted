@@ -120,6 +120,7 @@ javascript:
     - "assets/js/script/footerDate.js"
     - "assets/js/script/tabsInit.js"
     - "assets/js/script/translate.js"
+    - "assets/js/script/jotform.js"
 
 tableScript:
   dest:
