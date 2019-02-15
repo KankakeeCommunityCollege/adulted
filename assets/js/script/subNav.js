@@ -1,6 +1,7 @@
 // Builds out the sub-navigation based on whe current URL of the user.
 $(document).ready(function() {
   var currentUrl = window.location.href;
+  var host = window.location.host + '/';
   // Remove the http(s):// protocol
   var noProto = currentUrl.replace(/(^\w+:|^)\/\//, '');
   // Remove the baseURL (foundation.kcc.edu)
@@ -86,8 +87,6 @@ $(document).ready(function() {
     createList();
 
   }
-
-  if ( noProto !== 'adulted.kcc.edu/' && noProto !== 'adulted.kcc.edu/#contact' && noProto !== 'localhost:3000/' && noProto !== 'localhost:3000/#contact' ) {
-    writeSubNav();
-  }
+  var isSubNavPage = noProto !== host && noProto !== host + '#contact' && noProto !== host + 'programs/community-literacy/form/';
+  if (isSubNavPage) { writeSubNav(); }
 });
