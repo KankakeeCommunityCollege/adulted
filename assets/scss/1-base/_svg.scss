@@ -3,6 +3,7 @@
 
 .svg__anim--wrapper {
   height: auto;
+  overflow: hidden;
   width: 100%; // leave these in non-alphabetic order so that 'max-width' overides 'width' in the stylesheet's cascade
   max-width: 130px; // (leave these in non-alphabetic order) this provides responsive display of the SVGs
 }
