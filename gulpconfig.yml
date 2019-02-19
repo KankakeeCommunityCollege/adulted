@@ -116,9 +116,9 @@ javascript:
     - "assets/js/script/accordian.js"
     - "assets/js/script/boldFont.js"
     - "!assets/js/script/jumpLinkFix.js"
-    - "assets/js/script/bootstrapTabs.js"
+    - "!assets/js/script/bootstrapTabs.js"
     - "assets/js/script/footerDate.js"
-    - "assets/js/script/tabsInit.js"
+    - "!assets/js/script/tabsInit.js"
     - "assets/js/script/translate.js"
     - "assets/js/script/jotform.js"
 

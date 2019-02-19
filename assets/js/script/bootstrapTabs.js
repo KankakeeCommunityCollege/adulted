@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  $('.jsTabLink').on('click', function (e) {
+  $('.jsTabLink a').on('click', function (e) {
     e.preventDefault();
     $(this).tab('show');
   });
