@@ -24,7 +24,8 @@ $('document').ready(function () {
 
         // Change the width of the languages
         $("iframe").contents().find('.goog-te-menu2-item').css('width', '100%');
-        $("iframe").contents().find('td').css('width', '100%');
+        $("iframe").contents().find('td').css({'width':'100%','display':'block'});
+        $("iframe").contents().find('.goog-te-menu2-colpad').css('display', 'none');
 
         // Change hover effects
         $("iframe").contents().find(".goog-te-menu2-item div").hover(function () {
