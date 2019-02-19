@@ -1,0 +1,14 @@
+// Styling for unordered & ordered lists:
+// =======================================
+
+.list__no-bullet {
+  list-style-type: none;
+}
+
+.list__sm-padding {
+  padding-inline-start: 20px;
+}
+
+.list__item--margin-bottom {
+  margin-bottom: 1rem;
+}
