@@ -98,7 +98,7 @@
 .action-cards__col--esl:hover #hello,
 .action-cards__col--esl:focus #hello {
   animation-name: fadeIn1;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 2;
   animation-direction: alternate;
@@ -106,8 +106,8 @@
 
 .action-cards__col--esl:hover #korean,
 .action-cards__col--esl:focus #korean {
-  animation-name: fadeIn2;
-  animation-duration: .9s;
+  animation-name: fadeIn1;
+  animation-duration: 1.4s;
   animation-delay: .35s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 2;
@@ -124,10 +124,65 @@
 }
 
 @keyframes fadeIn2 {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  1% {
     opacity: 1;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+#a,
+#l,
+#i,
+#v,
+#e {
+  opacity: 0;
+}
+
+.action-cards__col--literacy:hover #a,
+.action-cards__col--literacy:focus #a {
+  animation-name: fadeIn2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.action-cards__col--literacy:hover #l,
+.action-cards__col--literacy:focus #l {
+  animation-name: fadeIn2;
+  animation-duration: 1.8s;
+  animation-delay: .2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.action-cards__col--literacy:hover #i,
+.action-cards__col--literacy:focus #i {
+  animation-name: fadeIn2;
+  animation-duration: 1.6s;
+  animation-delay: .4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.action-cards__col--literacy:hover #v,
+.action-cards__col--literacy:focus #v {
+  animation-name: fadeIn2;
+  animation-duration: 1.4s;
+  animation-delay: .6s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.action-cards__col--literacy:hover #e,
+.action-cards__col--literacy:focus #e {
+  animation-name: fadeIn2;
+  animation-duration: 1.2s;
+  animation-delay: .8s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
 }
