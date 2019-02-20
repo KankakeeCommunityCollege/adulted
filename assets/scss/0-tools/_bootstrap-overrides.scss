@@ -59,9 +59,6 @@ a {
 // Make bootstrap .btn-primary blue color darker for more visual-contrast accessibility requirements
 .btn-primary {
   background-color: $link-blue;
-  &:hover {
-    background-color: green;
-  }
 }
 
 .btn--base-align {
