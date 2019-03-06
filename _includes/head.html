@@ -31,18 +31,9 @@
         <link rel="icon" type="image/x-icon" href="{{page.baseurl}}favicon.ico" />
         <!-- Custom CSS Stylesheet -->
         <link rel="stylesheet" href="{{page.baseurl}}assets/css/main.css{% if site.data.cache_bust_css %}?version={{ site.data.cache_bust_css | truncate: 32, '' }}{% endif %}">
-        <!--[if IE]>
-     <style type="text/css">
 
-       .sample {
-         filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://athletics.kcc.edu/assets/img/menu-bg.png', sizingMethod='scale');
-         background:none !important;
-       }
-
-       </style>
-   <![endif]-->
     </head>
-    <body id="page-top" {% if page.title == "Volunteer Form" %}style="margin-top:90px;" {% endif %}>
+    <body id="page-top">
     {% if jekyll.environment == "publish" %}
       <!-- include Google Tag Manager noscript on production -->
       {% include google-noscript.html %}
