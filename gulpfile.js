@@ -55,7 +55,7 @@ gulp.task('watch', function() { // Watch for changes to be piped into browserSyn
   //gulp.watch(config.watch.javascript, ['javascript', browserSync.reload]); // JS changes
   //gulp.watch(config.watch.tableScript, ['tableScript', browserSync.reload]); // JS changes
   gulp.watch(config.watch.sass, ['sass']); // SASS/SCSS changes
-  //gulp.watch(config.watch.webpack, ['webpack', browserSync.reload]);
+  gulp.watch(config.watch.webpack, ['build', browserSync.reload]);
   gulp.watch(config.watch.sass, ['contentSass']); // SASS/SCSS changes
   gulp.watch(config.watch.images, ['copy', browserSync.reload]); // Watch for new static assets like images
 });

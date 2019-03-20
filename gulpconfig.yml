@@ -120,7 +120,7 @@ watch: # 'Watch' for changes in all the following:
     - "assets/js/table/spreadsheet.min.js"
     - "assets/js/table/*.js"
   sass: "assets/scss/**/*.scss"
-  #webpack: "assets/js/dist/*"
+  webpack: "assets/js/dist/*.js"
   pages:
     - "*.{md,html,yml,xml}"
     - "{_data,_includes,_layouts,_pages,_posts,_alerts}/**/*.{md,html,yml,xml}"
