@@ -11,4 +11,3 @@ import './boldFont.js';
 import './footerDate.js';
 import './translate.js';
 import './jotform.js';
-import './babelTest.js';

@@ -20,7 +20,8 @@ copy:
   assets:
     # all files below the assets dir
     # everything gets copied to site build becuase some JS files are linked directly into pages and not compiled into all.min.js)
-    - "assets/**/*"
+    - "assets/css/*"
+    - "assets/img/*"
     - "assets/js/dist/*"
     # exclusions: (Don't copy these items because they are handled by other gulp tasks)
     - "!assets/{js,scss,css}/**/*"   # js, scss and css files
@@ -29,6 +30,14 @@ copy:
     - "!assets/scss{,/**}"           # scss dir
   dist: "_site/assets/"
   notification: "Running Copy"
+
+copyVendor:
+  assets:
+    # all files below the assets dir
+    # everything gets copied to site build becuase some JS files are linked directly into pages and not compiled into all.min.js)
+    - "assets/vendor/**/*.*"
+  dist: "_site/assets/"
+  notification: "Running Copy Vendors"
 
 sass:
   # Autoprefixer will make sure your CSS works with these browsers
