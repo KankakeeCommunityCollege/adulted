@@ -1,0 +1,13 @@
+import './sliders.js';
+import './lazyLoad.js';
+import './currentPage.js';
+import './searchToggle.js';
+import './scrollFunction.js';
+import './subNav.js';
+import './walkText.js';
+import './tabLink.js';
+import './accordian.js';
+import './boldFont.js';
+import './footerDate.js';
+import './translate.js';
+import './jotform.js';
