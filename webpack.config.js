@@ -1,4 +1,6 @@
 const path = require('path');
+const HashPlugin = require('hash-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -9,7 +11,7 @@ module.exports = {
     'table': './assets/js/table/table.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[hash].bundle.js',
     path: path.resolve(__dirname, 'assets', 'js', 'dist')
   },
   module: {
@@ -26,6 +28,10 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HashPlugin({ path: './_data/', fileName: 'hash.yml' }),
+    new CleanWebpackPlugin({ path: './assets/js/dist/' })
+  ],
   resolve: {
     extensions: ['.json', '.js', '.jsx']
   }
