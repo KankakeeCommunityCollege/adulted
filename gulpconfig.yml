@@ -21,7 +21,7 @@ copy:
     # all files below the assets dir
     # everything gets copied to site build becuase some JS files are linked directly into pages and not compiled into all.min.js)
     - "assets/**/*"
-    - "assets/js/dist/*.js"
+    - "assets/js/dist/*"
     # exclusions: (Don't copy these items because they are handled by other gulp tasks)
     - "!assets/{js,scss,css}/**/*"   # js, scss and css files
     - "!assets/css{,/**}"            # css dir
@@ -120,7 +120,9 @@ watch: # 'Watch' for changes in all the following:
     - "assets/js/table/spreadsheet.min.js"
     - "assets/js/table/*.js"
   sass: "assets/scss/**/*.scss"
-  webpack: "assets/js/dist/*.js"
+  watchWebpack:
+    - "assets/js/dist/*.js"
+    - "_data/*"
   pages:
     - "*.{md,html,yml,xml}"
     - "{_data,_includes,_layouts,_pages,_posts,_alerts}/**/*.{md,html,yml,xml}"

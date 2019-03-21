@@ -48,14 +48,13 @@ gulp.task('default', function(done) { // Default gulp task (run via 'gulp' in te
     //.pipe(gulp.dest('assets/js/dist/'));
 //});
 
-
 // Watch task:
 gulp.task('watch', function() { // Watch for changes to be piped into browserSync on saving of files:
   gulp.watch(config.watch.pages, ['build', browserSync.reload]); // Watch for new pages and changes.
   //gulp.watch(config.watch.javascript, ['javascript', browserSync.reload]); // JS changes
   //gulp.watch(config.watch.tableScript, ['tableScript', browserSync.reload]); // JS changes
   gulp.watch(config.watch.sass, ['sass']); // SASS/SCSS changes
-  gulp.watch(config.watch.webpack, ['build', browserSync.reload]);
+  gulp.watch(config.watch.watchWebpack, ['build', browserSync.reload]);
   gulp.watch(config.watch.sass, ['contentSass']); // SASS/SCSS changes
   gulp.watch(config.watch.images, ['copy', browserSync.reload]); // Watch for new static assets like images
 });
