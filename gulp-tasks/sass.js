@@ -8,7 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var gulpif = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var browserSync = require('browser-sync');
-var hashsum = require("gulp-hashsum");
+var hashsum = require('gulp-hashsum');
 
 var PRODUCTION = !!(yargs.argv.production); // Run things that say 'PRODCUTION' on production builds only ($ gulp --production)
 

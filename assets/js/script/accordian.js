@@ -2,6 +2,8 @@
 // Allows anchor jump-link to work with with acordian function
 //
 
+// According to what
+
 $('.donateTarget').on('click', function() {
   $('#collapseOne').toggle('show').trigger('showCollapsed');
 });
