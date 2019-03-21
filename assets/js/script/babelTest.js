@@ -9,7 +9,7 @@ function printSomeStuff() {
 
 //change stuff
   const map = elements.map((element) => {
-    return element + ' <br>';
+    return '<hr>' + element + ' <br><hr>';
   });
 
   const testDiv = document.getElementById('theTest');
