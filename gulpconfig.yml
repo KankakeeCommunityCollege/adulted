@@ -114,7 +114,7 @@ sitemap:
     - "_site/**/*.pdf"
     - "_site/**/**/*.pdf"
   siteUrl:
-    - "https://foundation.kcc.edu"
+    - "https://adulted.kcc.edu"
 
 jekyll:
   notification: "Running jekyll"
