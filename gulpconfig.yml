@@ -18,12 +18,8 @@ copy:
   # The two comments above this one came from the template.
   # We copy all JS and SCSS because Google Chrome Inspect will tell you where the style is located within the sass structure.
   assets:
-    # all files below the assets dir
-    # everything gets copied to site build becuase some JS files are linked directly into pages and not compiled into all.min.js)
-    - "assets/css/*"
-    - "assets/img/*"
-    - "assets/js/dist/*"
-    # exclusions: (Don't copy these items because they are handled by other gulp tasks)
+    - "assets/**/*"
+    # exclusions: (Don't copy these items because they are handled by other gulp tasks):
     - "!assets/{js,scss,css}/**/*"   # js, scss and css files
     - "!assets/css{,/**}"            # css dir
     - "!assets/js{,/**}"             # js dir
@@ -31,20 +27,7 @@ copy:
   dist: "_site/assets/"
   notification: "Running Copy"
 
-copyVendor:
-  assets:
-    # all files below the assets dir
-    # everything gets copied to site build becuase some JS files are linked directly into pages and not compiled into all.min.js)
-    - "assets/vendor/**/*.*"
-  dist: "_site/assets/"
-  notification: "Running Copy Vendors"
-
 sass:
-  # Autoprefixer will make sure your CSS works with these browsers
-  compatibility:    # These are pretty standard autoprefixer compatibility settings
-    - "last 2 versions"
-    - "ie >= 9"
-    - "defaults"
   dest:
     jekyllRoot: "assets/css/"
     buildDir: "_site/assets/css/"
@@ -52,59 +35,12 @@ sass:
   src: "assets/scss/main.scss"
 
 # Gulp task to create stylesheet for custom CloudCannon editor styles (CMS customizations)
-contentSass:
-  # Autoprefixer will make sure your CSS works with these browsers
-  compatibility:    # These are pretty standard autoprefixer compatibility settings
-    - "last 2 versions"
-    - "ie >= 9"
-    - "defaults"
+cmsScss:
   dest:
     jekyllRoot: "assets/css/"
     buildDir: "_site/assets/css/"
   notification: "Running Content Sass"
   src: "assets/scss/content.scss"
-
-# Main JavaScript compile task (gulp_tasks/script.js)
-javascript:
-  dest:
-    jekyllRoot: "assets/js/script/"
-    buildDir: "_site/assets/js/script/"
-  filename: "all.min.js"
-  notification: "Running JavaScript"
-  src:
-    # Exclusions: (!exclaim to exclude)
-    # Inclusions: (included in JS compile)
-    - "!assets/js/script/test.js" # test js file
-    - "!assets/js/script/breadcrumb.js"
-    - "assets/js/script/sliders.js"
-    - "assets/js/script/lazyLoad.js"
-    - "assets/js/script/currentPage.js"
-    - "assets/js/script/searchToggle.js"
-    - "!assets/js/script/shopSmile.js"
-    - "assets/js/script/scrollFunction.js"
-    - "assets/js/script/subNav.js"
-    - "assets/js/script/walkText.js"
-    - "assets/js/script/tabLink.js"
-    - "!assets/js/script/scholarshipTime.js"
-    - "assets/js/script/accordian.js"
-    - "assets/js/script/boldFont.js"
-    - "!assets/js/script/jumpLinkFix.js"
-    - "!assets/js/script/bootstrapTabs.js"
-    - "assets/js/script/footerDate.js"
-    - "!assets/js/script/tabsInit.js"
-    - "assets/js/script/translate.js"
-    - "assets/js/script/jotform.js"
-
-tableScript:
-  dest:
-    jekyllRoot: "assets/js/table/"
-    buildDir: "_site/assets/js/table/"
-  filename: "spreadsheet.min.js"
-  notification: "Running tableScript"
-  src:
-    # Exclusions: (!exclaim to exclude)
-    # Inclusions: (included in JS compile)
-    - "assets/js/table/scholarshipTable.js"
 
 sitemap:
   src:
@@ -122,23 +58,17 @@ jekyll:
 watch: # 'Watch' for changes in all the following:
   images:
     - "assets/img/**/*"
-  javascript:
-    - "assets/js/script/all.min.js"
-    - "assets/js/script/*.js"
-  tableScript:
-    - "assets/js/table/spreadsheet.min.js"
-    - "assets/js/table/*.js"
+    - "uploads/**/*"
   sass: "assets/scss/**/*.scss"
-  watchWebpack:
-    - "assets/js/dist/*.js"
-    - "_data/*"
+  cmsScss: "assets/scss/**/*.scss"
   pages:
-    - "*.{md,html,yml,xml}"
-    - "{_data,_includes,_layouts,_pages,_posts,_alerts}/**/*.{md,html,yml,xml}"
-    # All these subfolders are added because the watch task was not looking deep enough
+    - "*.{md,html,yml,xml}" # watch the project root.
+    - "{_data,_includes,_layouts,_pages,_posts,_alerts,_contacts}/**/*.{md,html,yml,xml}" # watch standard jekyll dirs.
     # !exlclusions:
-    - "!_site/**/*.*"
-    - "!assets/**/*.*"
+    # These are important exceptions that should be excluded from watching!
+    - "!sitemap.xml" # When you run `$ gulp --production`, sitemap gets copied-out to project root. This would then, be picked up by watch, which would kick-off another build, causing another change in the sitemap.xml file (i.e. an infinite loop)
+    - "!_site/**/*" # This is always going to change.
+    - "!assets/**/*" # Don't watch 'assets/' dir. SASS & JS changes get injected into the '_site' dir & localhost:3000/ whithout having to re-run the whole 'build' task. Images are watched seperately
     - "_alumnis/*.md"
     - "about/**"
     - "about/**/**"
