@@ -1,7 +1,34 @@
 title: "Kankakee Community College"
 site_title: "Adult & Community Education"
+site_name: "Adult & Community Education"
+theme: 'kcc-gem-theme'
 url: https://adulted.kcc.edu
 google_analytics_key: UA-4328282-19
+#translate: true ## Uncomment to activate Google Translate Powers (unfortunately no cowpowers)!!
+nav_config:
+  smaller_brand: true
+nav_links:
+  - link_text: About
+    link_href: 'about'
+    button: false
+  - link_text: Programs
+    link_href: 'programs'
+    button: false
+  - link_text: Resources
+    link_href: 'resources'
+    button: false
+  - link_text: Contact
+    link_href: '#contact'
+    button: false
+  - link_text: Enroll
+    button: true
+    dropdown:
+      - text: Community Literacy
+        href: 'programs/community-literacy'
+      - text: English as a Second Language
+        href: 'programs/esl'
+      - text: GED/High School Equivalency
+        href: 'programs/ged'
 collections:
   students:
     output: false
