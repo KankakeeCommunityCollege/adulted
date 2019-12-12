@@ -1,5 +1,5 @@
 ### Ignore the Gemfile to keep it out of cloudcannon ###
-Gemfile
+# Gemfile
 
 ### General Apple things to ignore ###
 .DS_Store
@@ -46,3 +46,9 @@ adobe/*
 
 # Yarn error log
 yarn-error.log
+
+# Jekyll 4 caching dir
+.jekyll-cache
+
+# DO NOT PUSH TO CLOUDCANNON
+.ruby-version
