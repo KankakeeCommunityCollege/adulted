@@ -1,3 +1,48 @@
+// TYPOGRAPHY STYLES FOR ADULTED.KCC.EDU
+// ======================================
+
+// OVERRIDES TO KCC-GEM-THEME'S `.typography__nav-heading` STYLING
+// NEEDED BECAUSE 'Adult & Community Education' IS FAR-TOO LONG AND WORDY FOR THE NAVBAR!!!
+.typography__nav-heading {
+  font-size: .85rem;
+}
+
+@media screen and (min-width:360px) {
+  .typography__nav-heading {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:410px) {
+  .typography__nav-heading {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .typography__nav-heading {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .typography__nav-heading {
+    font-size: 1.65rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .typography__nav-heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .typography__nav-heading {
+    font-size: 2.6rem;
+  }
+}
+
 .page-heading { // This class is applied to h1 level headings
   color: $sub-nav-heading;
   font-family: $secondaryfont-stack;
@@ -172,60 +217,6 @@ p.general-p {
   border-bottom-width: thick;
   color: $primary-blue;
   text-transform: uppercase;
-}
-
-.typography__local-nav--main-heading {
-  align-self: center;
-  color: $primary-blue;
-  display: inline;
-  font-family: $kcc-font;
-  font-size: .85rem;
-  font-style: italic;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition-property: color;
-  transition-timing-function: ease;
-  transition-duration: .4s;
-  &:hover,
-  &:focus {
-    color: $primary-red;
-  }
-}
-
-@media screen and (min-width:360px) {
-  .typography__local-nav--main-heading {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width:410px) {
-  .typography__local-nav--main-heading {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (min-width:576px) {
-  .typography__local-nav--main-heading {
-    font-size: 1.6rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .typography__local-nav--main-heading {
-    font-size: 1.65rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .typography__local-nav--main-heading {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .typography__local-nav--main-heading {
-    font-size: 2.6rem;
-  }
 }
 
 .typography__latest-news-widget__rollup-list-h {
