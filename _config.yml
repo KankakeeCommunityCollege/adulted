@@ -4,9 +4,7 @@ site_name: "Adult & Community Education"
 theme: 'kcc-gem-theme'
 url: https://adulted.kcc.edu
 google_analytics_key: UA-4328282-19
-#translate: true ## Uncomment to activate Google Translate Powers (unfortunately no cowpowers)!!
-nav_config:
-  smaller_brand: true
+translate: true ## Uncomment to activate Google Translate Powers (unfortunately no cowpowers)!!
 nav_links:
   - link_text: About
     link_href: 'about'
@@ -29,6 +27,13 @@ nav_links:
         href: 'programs/esl'
       - text: GED/High School Equivalency
         href: 'programs/ged'
+sub-nav_links:
+  - link_text: 'GED/HiSet'
+    link_href: 'programs/ged'
+  - link_text: ESL
+    link_href: 'programs/esl'
+  - link_text: 'Community Literacy'
+    link_href: 'programs/community-literacy'
 collections:
   students:
     output: false
