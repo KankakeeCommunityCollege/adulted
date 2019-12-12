@@ -40,6 +40,8 @@ collections:
   posts:
     output: false
     _hide_content: true
+  contacts:
+    output: false
 defaults:
 - scope:
     path: ''
@@ -80,6 +82,7 @@ exclude:
   - "gulp-tasks/"
   - "install.sh"
   - "siteicon.png"
+  - "webpack.config.js"
 
 uploads_dir: # specifies the default uploads directory for CloudCannon
   - "uploads/"
