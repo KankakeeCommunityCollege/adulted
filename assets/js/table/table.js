@@ -1,1 +1,0 @@
-import './scholarshipTable.js';
