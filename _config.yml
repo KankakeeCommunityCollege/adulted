@@ -27,6 +27,8 @@ nav_links:
         href: 'programs/esl'
       - text: GED/High School Equivalency
         href: 'programs/ged'
+      - text: 'New! GED+Career'
+        href: 'programs/ged/ged-plus-career'
 sub-nav_links:
   - link_text: 'GED/HiSet'
     link_href: 'programs/ged'
