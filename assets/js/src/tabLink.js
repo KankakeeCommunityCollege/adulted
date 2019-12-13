@@ -9,7 +9,7 @@ function makeTabsLinkable() {
     return;
 
   if (location.hash) {
-    $('#nav-tab a[href="' + location.hash.replace(/\/$/g, '') + '"]').tab('show'); // Bootstrap 4 method. See: https://getbootstrap.com/docs/4.4/components/navs/#via-javascript
+    $('#myTab a[href="' + location.hash.replace(/\/$/g, '') + '"]').tab('show'); // Bootstrap 4 method. See: https://getbootstrap.com/docs/4.4/components/navs/#via-javascript
     setTimeout(() => {
       $(window).scrollTop(0);
     }, 400);
