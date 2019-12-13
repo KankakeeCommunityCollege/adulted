@@ -12,6 +12,10 @@ $(document).ready(function() {
 
   function linkTabs() {
     var url = document.location.toString();
+
+    if (url.search(/\/programs\/community-literacy/g) === -1)
+      return;
+
     if (url.match(/(?!#contact$)#.+/) ) {
       $('.nav-tabs a[href="#'+url.split('#')[1]+'"]').tab('show') ;
       deferScroll.resolve();
