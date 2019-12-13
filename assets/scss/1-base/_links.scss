@@ -36,16 +36,16 @@
   // mobile devices get slightly different offset w/ different sized fixed header
   content: " ";
   display: block;
-  height: 116px; // defining a height increases the size
-  margin-top: -116px; // negative margin offsets hight to pull it back down
+  height: 126px; // defining a height increases the size
+  margin-top: -126px; // negative margin offsets hight to pull it back down
   pointer-events: none;
   visibility: hidden;
 }
 
 @media screen and (min-width: 768px) {
     .link__offset::before {
-      height: 116px;
-      margin-top: -116px;
+      height: 126px;
+      margin-top: -126px;
   }
 }
 
