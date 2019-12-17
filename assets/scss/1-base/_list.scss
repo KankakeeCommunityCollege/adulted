@@ -18,3 +18,15 @@
   font-weight: 700;
   padding-right: .5rem;
 }
+
+.list__steps {
+  color: $grey-6;
+  list-style-type: none;
+  counter-reset: elementcounter;
+  padding-inline-start: 20px;
+  & li:before {
+    content: "Step " counter(elementcounter) ". ";
+    counter-increment: elementcounter;
+    font-weight: bold;
+  }
+}
