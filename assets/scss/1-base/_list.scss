@@ -24,7 +24,7 @@
   list-style-type: none;
   counter-reset: elementcounter;
   padding-inline-start: 20px;
-  & li:before {
+  & li::before {
     content: "Step " counter(elementcounter) ". ";
     counter-increment: elementcounter;
     font-weight: bold;
