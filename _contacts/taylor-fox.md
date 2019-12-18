@@ -1,9 +1,9 @@
 ---
-name:
+name: Taylor Fox
 contacts_title: Administrative Assistant
 display_order: 4
-portrait: For departments with no contact photos, do not change this field.
+portrait: none
 phone: 815-802-8300
-email:
+email: tfox@kcc.edu
 department_email:
 ---
