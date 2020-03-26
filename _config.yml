@@ -4,7 +4,6 @@ site_name: "Adult & Community Education"
 theme: 'kcc-gem-theme'
 url: https://adulted.kcc.edu
 google-tag_key: GTM-M4MDTMS
-emergency_alert: true
 translate: true ## Uncomment to activate Google Translate Powers (unfortunately no cowpowers)!!
 nav_links:
   - link_text: About
