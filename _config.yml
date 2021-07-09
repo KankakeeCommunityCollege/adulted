@@ -1,7 +1,7 @@
 title: "Kankakee Community College"
-# BUILD
 site_title: "Adult & Community Education"
 site_name: "Adult & Community Education"
+port: 3000
 theme: 'kcc-gem-theme'
 url: https://adulted.kcc.edu
 google-tag_key: GTM-M4MDTMS
@@ -68,7 +68,6 @@ future: true
 markdown: kramdown
 
 exclude:
-  - "gulpfile.js"
   - "node_modules"
   - "npm-debug.log"
   - "package.json"
@@ -76,14 +75,10 @@ exclude:
   - "README.md"
   - "Gemfile"
   - "Gemfile.lock"
-  - "gulpconfig.yml"
-  - "/docs/"
-  - "yarn.lock"
-  - "/assets/adobe/"
-  - "gulp-tasks/"
-  - "install.sh"
   - "siteicon.png"
   - "webpack.config.js"
+  - "buildtools/"
+  - "postcss.config.js"
 
 uploads_dir: # specifies the default uploads directory for CloudCannon
   - "uploads/"
