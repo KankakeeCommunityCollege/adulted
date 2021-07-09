@@ -1,179 +1,22 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    {%- for page in site.pages -%}
+    {% unless page.url contains '.xml' or page.url contains '.txt' %}
     <url>
-        
-        <loc>https://adulted.kcc.edu/</loc>
-    
-        
-        <lastmod>2021-02-18T20:51:24.033Z</lastmod>
-    
+        <loc>{{ site.public-url }}{{ page.url | uri_escape }}</loc>
+        <lastmod>{% if page.last-mod-time %}{{ page.last-mod-time | date: '%Y-%m-%dT%H:%M:%S.%LZ' }}{% else %}{{ 'today' | date: '%Y-%m-%dT%H:%M:%S.%LZ' }}{% endif %}</lastmod>
     </url>
+    {%- endunless -%}
+    {%- endfor -%}
+    {%- for file in site.static_files -%}
+    {% if file.extname == '.pdf' %}
     <url>
-        
-        <loc>https://adulted.kcc.edu/about/</loc>
-    
-        
-        <lastmod>2021-02-18T20:51:24.033Z</lastmod>
-    
+        <loc>{{ site.public-url }}{{ file.path | uri_escape | replace: '&', '%26' }}</loc>
+        <lastmod>{{ file.modified_time | date: '%Y-%m-%dT%H:%M:%S.%LZ' }}</lastmod>
     </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/programs/</loc>
-    
-        
-        <lastmod>2021-02-18T20:51:24.033Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/resources/</loc>
-    
-        
-        <lastmod>2021-02-18T20:51:24.033Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/search/</loc>
-    
-        
-        <lastmod>2021-02-18T20:51:24.034Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/programs/community-literacy/</loc>
-    
-        
-        <lastmod>2021-02-18T20:51:24.032Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/programs/esl/</loc>
-    
-        
-        <lastmod>2021-02-18T20:51:24.032Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/programs/ged/</loc>
-    
-        
-        <lastmod>2021-02-18T20:51:24.033Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/programs/community-literacy/form/</loc>
-    
-        
-        <lastmod>2021-02-18T20:51:24.032Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/programs/ged/ged-plus-career/</loc>
-    
-        
-        <lastmod>2021-02-18T20:51:24.033Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/Constitution_Study_Guide-English_Updated.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/Constitution_Study_Guide-Spanish_Updated 1-17.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/docs/2018 PresCircledonors.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/docs/century-club-contribution.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/docs/century-scholars-list.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/docs/distinguished-alumni-form.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/docs/women-giving.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/pdf/ALIVEvolunteerApp.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/pdf/Constitution_Study_Guide-English_Updated.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/pdf/Constitution_Study_Guide-Spanish_Updated_1-17.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/pdf/getting-to-know-you-interview.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>https://adulted.kcc.edu/uploads/pdf/monthly-tutor-report.pdf</loc>
-    
-        
-        <lastmod>2020-03-17T18:59:22.000Z</lastmod>
-    
-    </url>
+    {%- endif -%}
+    {% endfor %}
 </urlset>
