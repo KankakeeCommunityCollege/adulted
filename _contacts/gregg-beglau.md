@@ -1,9 +1,10 @@
 ---
 name: Gregg Beglau
-contacts_title: 'Coordinator of Student Support & Transition for High School Equivalency & ESL'
-display_order: 2
+contacts_title: Director of Adult and Community Education
+display_order: 1
 portrait_image: uploads/gbeglau.jpg
 phone: 815-802-8300
-email: gbeglau@email.com
+email: gbeglau@kcc.edu
 department_email:
 ---
+
