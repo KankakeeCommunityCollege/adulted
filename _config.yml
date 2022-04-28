@@ -2,6 +2,7 @@ title: "Kankakee Community College"
 site_title: "Adult & Community Education"
 site_name: "Adult & Community Education"
 port: 3000
+timezone: America/Chicago
 theme: 'kcc-gem-theme'
 url: https://adulted.kcc.edu
 google-tag_key: GTM-M4MDTMS
@@ -38,21 +39,8 @@ sub-nav_links:
 collections:
   students:
     output: false
-  posts:
-    output: false
-    _hide_content: true
   contacts:
     output: false
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-    title: ''
-    permalink: /:categories/:title/
-    baseurl: ../../../
-    categories: news
 permalink: pretty
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
