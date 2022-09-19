@@ -13,20 +13,21 @@ sub-nav_section: Programs
     <div class="row">
       <div class="col sub-nav__content--wrapper">
 {% comment %}
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="ged-hiset-tab" data-toggle="tab" href="#ged-hiset" role="tab" aria-controls="ged-hiset" aria-selected="true">GED/HiSet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="ged-plus-career-tab" data-toggle="tab" href="#ged-plus-career" role="tab" aria-controls="ged-plus-career" aria-selected="false">New! GED+Career</a>
+        </li>
+      </ul>
 
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="ged-hiset-tab" data-toggle="tab" href="#ged-hiset" role="tab" aria-controls="ged-hiset" aria-selected="true">GED/HiSet</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="ged-plus-career-tab" data-toggle="tab" href="#ged-plus-career" role="tab" aria-controls="ged-plus-career" aria-selected="false">New! GED+Career</a>
-          </li>
-        </ul>
-
-          <div class="tab-content mt-3 px-1" id="myTabContent">
-            <div class="tab-pane fade show active" id="ged-hiset" role="tabpanel" aria-labelledby="ged-hiset-tab">
-                
-                {% endcomment %}
+        <div class="tab-content mt-3 px-1" id="myTabContent">
+          <div class="tab-pane fade show active" id="ged-hiset" role="tabpanel" aria-labelledby="ged-hiset-tab">
+{% endcomment %}
+              <div class="iframe__wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iRviY4Uz1EY?rel=0&autoplay=1&cc_lang_pref=en&cc_load_policy=1&mute=1&fs=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+              </div>
               <div class="editable">
                 <h3 class="typography__h3 typography__sm-sup">High School Equivalency (GED<sup>&reg;</sup> / HiSet<sup>&reg;</sup>) Classes</h3>
                 <p>If you want to get a GED diploma or high school equivalency certificate, KCC can help. You&rsquo;ll find a welcoming classroom environment, plus instructors and staff who will help you succeed.</p>
@@ -42,8 +43,7 @@ sub-nav_section: Programs
                 <h4 class="typography__h4">How to Enroll</h4>
                 <p><strong>Step 1. Complete the <a target="_blank" href="https://apply.kcc.edu/">online application.</a></strong></p>
                 <p><strong>Step 2. A representative from Adult Ed. will contact you after you submit your application regarding the next steps</strong></p>
-                <p><strong>Step 3. Please call <a href="tel:1-815-802-8100">815-802-8300</a> if you have any question or if you are having difficulty with the application.</strong></p><!-- Did somebody say tacos? -->
-                <!-- Did somebody say tacos? -->
+                <p><strong>Step 3. Please call <a href="tel:1-815-802-8100">815-802-8300</a> if you have any question or if you are having difficulty with the application.</strong></p>
                 {% comment %}
                 <div data-tockify-component="calendar" data-tockify-search="GED" data-tockify-calendar="kankakeecc">&nbsp;</div>
                 <script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
