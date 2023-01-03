@@ -30,7 +30,7 @@ nav_links:
       - text: GED/High School Equivalency
         href: 'programs/ged'
 sub-nav_links:
-  - link_text: 'GED/HiSet'
+  - link_text: 'GED Prep'
     link_href: 'programs/ged'
   - link_text: ESL
     link_href: 'programs/esl'
