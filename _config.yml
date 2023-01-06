@@ -27,7 +27,7 @@ nav_links:
         href: 'programs/community-literacy'
       - text: English as a Second Language
         href: 'programs/esl'
-      - text: GED/High School Equivalency
+      - text: GED/High School Diploma
         href: 'programs/ged'
 sub-nav_links:
   - link_text: 'GED Prep'
