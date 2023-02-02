@@ -1,6 +1,7 @@
 import '../../scss/main.scss';
-import makeTabsLinkable from './tabLink.js';
 
-document.addEventListener('DOMContentLoaded', function() {
-  makeTabsLinkable();
+window.addEventListener('load', () => {
+  if (document.getElementById('SearchTermForm')) {
+    import('./watchForWebsiteSearch').then(({default: watchForWebsiteSearch}) => watchForWebsiteSearch())
+  }
 });
