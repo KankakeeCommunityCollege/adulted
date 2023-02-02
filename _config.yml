@@ -5,6 +5,7 @@ port: 3000
 timezone: America/Chicago
 theme: 'kcc-gem-theme'
 url: https://adulted.kcc.edu
+public-url: https://adulted.kcc.edu
 google-tag_key: GTM-M4MDTMS
 translate: true ## Uncomment to activate Google Translate Powers (unfortunately no cowpowers)!!
 nav_links:

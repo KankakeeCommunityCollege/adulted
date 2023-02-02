@@ -1,1 +1,0 @@
-!function(){"use strict";const o=/(\/programs\/community-literacy|\/programs\/ged)/g;document.addEventListener("DOMContentLoaded",(function(){-1!==location.href.search(o)&&location.hash&&($('#myTab a[href="'+location.hash.replace(/\/$/g,"")+'"]').tab("show"),setTimeout((()=>{$(window).scrollTop(0)}),400))}))}();
