@@ -6,6 +6,8 @@
 
 View it live: <https://adulted.kcc.edu/>
 
+This project's version of Ruby: `ruby-3.1.3`.
+
 -----
 
 <br>
