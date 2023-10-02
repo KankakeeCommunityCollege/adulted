@@ -4,103 +4,9 @@ baseurl: ../
 title: Programs
 description:
 sub-nav_section: Programs
-programs:
-  - image: assets/img/programs_ged.jpg
-    image_alt: GED Program at KCC
-    image_hover_text: GED Prep
-    description_markdown: >-
-      **GED Prep** prepares you to take and pass the GED<sup>®</sup> test.
-      Sessions begin throughout the year. **Classes are free** and include
-      resources at no cost to the student while enrolled.
-    url: programs/ged/
-    button_text: Learn More
-  - image: assets/img/programs_esl.jpg
-    image_alt: ESL Program at KCC
-    image_hover_text: ESL
-    description_markdown: >-
-      **English as a Second Language (ESL)** classes teach English to non-native
-      speakers. Instruction covers listening, speaking, reading and writing.
-      Classes are free and include resources at no cost to the student.
-    url: programs/esl/
-    button_text: Learn More
-  - image: assets/img/programs_literacy.jpg
-    image_alt:
-    image_hover_text: Community Literacy Project
-    description_markdown: >-
-      **The Literacy program** provides volunteer tutors to help struggling
-      readers with foundational skills in reading, writing and math. There is no
-      cost to the student. Accepting volunteer applications.
-    url: programs/community-literacy
-    button_text: Learn More
-_inputs:
-  programs:
-    comment: Edit programs in this page.
-  programs[*].image:
-    hidden: true
-  programs[*].image_alt:
-    hidden: true
-  programs[*].image_hover_text:
-    hidden: true
-  programs[*].url:
-    hidden: true
-  description_markdown:
-    comment: The main copy for the program.
-    options:
-      blockquote: false
-      bold: true
-      format: p
-      italic: true
-      strike: true
-      subscript: true
-      superscript: true
-      underline: true
-      bulletedlist: true
-      indent: false
-      numberedlist: true
-      outdent: false
-      code: false
-      embed: false
-      horizontalrule: false
-      image: false
-      table: false
-      undo: true
-      redo: true
-      removeformat: true
-      copyformatting: false
 ---
 <main>
   <div class="container sub-nav__content--wrapper">
-    {% for item in page.programs %}
-    <div class="row{% if forloop.first %} facilities__row--bottom-margin{% endif %}">
-      <div class="col-md-4 img-wrapper">
-        {% assign url_start = item.url | slice: 0 %}
-        {% if url_start == '/' %}
-          {% assign url_length = item.url | size | minus: 1 %}
-          {% assign href = item.url | slice: 1, url_length %}
-        {% else %}
-          {% assign href = item.url %}
-        {% endif %}
-        <a class="img-link" href="{{ page.baseurl }}{{ href }}">
-          <div class="thumb-caption">{{ item.image_hover_text }}</div>
-          <div class="img-hover">
-          </div>
-          {% assign path_start = item.image | slice: 0 %}
-          {% if path_start == '/' %}
-            {% assign path_length = item.image | size | minus: 1 %}
-            {% assign path = item.image | slice: 1, path_length %}
-          {% else %}
-            {% assign path = item.image %}
-          {% endif %}
-          <img class="img-fluid img-ease editable" src="{{ page.baseurl }}{{ path }}" alt="{{ item.image_alt }}" />
-        </a>
-      </div>
-      <div class="col-md-8 facilities__text-margin">
-        <p>{{ item.description_markdown | markdownify }}</p>
-        <p><a class="btn btn-primary" href="{{ page.baseurl }}{{ href }}">{{ item.button_text }}</a></p>
-      </div>
-    </div>
-    {% endfor %}
-    {% comment %}
     <div class="row facilities__row--bottom-margin">
       <div class="col-md-4 img-wrapper">
         <a class="img-link" href="{{ page.baseurl }}programs/ged/">
@@ -113,8 +19,8 @@ _inputs:
       <div class="col-md-8 facilities__text-margin">
         <div class="editable">
           <p></p>
-          <p><a class="btn btn-primary" href="{{ page.baseurl }}programs/ged/">Learn More</a></p>
         </div>
+        <p><a class="btn btn-primary" href="{{ page.baseurl }}programs/ged/">Learn More</a></p>
       </div>
     </div>
     <div class="row">
@@ -131,8 +37,8 @@ _inputs:
       <div class="col-md-8 facilities__text-margin">
         <div class="editable">
           <p><strong>English as a Second Language (ESL)</strong> classes teach English to non-native speakers. Instruction covers listening, speaking, reading and writing. Classes are free and include resources at no cost to the student.</p>
-          <p><a class="btn btn-primary" href="{C}{{ page.baseurl }}programs/esl/">Learn More</a></p>
         </div>
+        <p><a class="btn btn-primary" href="{C}{{ page.baseurl }}programs/esl/">Learn More</a></p>
       </div>
     </div>
     <div class="row">
@@ -149,10 +55,9 @@ _inputs:
       <div class="col-md-8 facilities__text-margin">
         <div class="editable">
             <p><strong>The Literacy program</strong> provides volunteer tutors to help struggling readers with foundational skills in reading, writing and math. There is no cost to the student. Accepting volunteer applications.</p>
-            <p><a class="btn btn-primary" href="{{ page.baseurl }}programs/community-literacy">Learn More</a></p>
-        </div>
+          </div>
+          <p><a class="btn btn-primary" href="{{ page.baseurl }}programs/community-literacy">Learn More</a></p>
       </div>
     </div>
-    {% endcomment %}
   </div>
 </main>
