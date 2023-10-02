@@ -33,6 +33,11 @@ programs:
     url: programs/community-literacy
     button_text: Learn More
 _inputs:
+  programs[*].image:
+    type: image
+    options:
+      width: 400
+      height: 225
   description_markdown:
     options:
       blockquote: false
