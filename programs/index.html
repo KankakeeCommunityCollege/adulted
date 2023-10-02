@@ -7,7 +7,7 @@ sub-nav_section: Programs
 programs:
   - image: assets/img/programs_ged.jpg
     image_alt: GED Program at KCC
-    image_caption: GED Prep
+    image_hover_text: GED Prep
     description_markdown: >-
       **GED Prep** prepares you to take and pass the GED<sup>&reg;</sup> test.
       Sessions begin throughout the year. Classes are free and include resources at no cost
@@ -16,7 +16,7 @@ programs:
     button_text: Learn More
   - image: assets/img/programs_esl.jpg
     image_alt: ESL Program at KCC
-    image_caption: ESL
+    image_hover_text: ESL
     description_markdown: >-
       **English as a Second Language (ESL)** classes teach English to non-native
       speakers. Instruction covers listening, speaking, reading and writing. Classes are free
@@ -25,14 +25,38 @@ programs:
     button_text: Learn More
   - image: assets/img/programs_literacy.jpg
     image_alt: 
-    image_caption: Community Literacy Project
+    image_hover_text: Community Literacy Project
     description_markdown: >-
       **The Literacy program** provides volunteer tutors to help struggling
       readers with foundational skills in reading, writing and math. There is no cost to
       the student. Accepting volunteer applications.
     url: programs/community-literacy
     button_text: Learn More
-
+_inputs:
+  programs:
+    description_markdown:
+      options:
+        blockquote: false
+        bold: true
+        format: p
+        italic: true
+        strike: true
+        subscript: true
+        superscript: true
+        underline: true
+        bulletedlist: true
+        indent: false
+        numberedlist: true
+        outdent: false
+        code: false
+        embed: false
+        horizontalrule: false
+        image: false
+        table: false
+        undo: true
+        redo: true
+        removeformat: true
+        copyformatting: false
 ---
 <main>
   <div class="container sub-nav__content--wrapper">
@@ -47,7 +71,7 @@ programs:
           {% assign href = item.url %}
         {% endif %}
         <a class="img-link" href="{{ page.baseurl }}{{ href }}">
-          <div class="thumb-caption">{{ item.image_caption }}</div>
+          <div class="thumb-caption">{{ item.image_hover_text }}</div>
           <div class="img-hover">
           </div>
           {% assign path_start = item.image | slice: 0 %}
