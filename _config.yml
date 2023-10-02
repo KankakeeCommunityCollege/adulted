@@ -72,6 +72,18 @@ exclude:
 
 uploads_dir: "uploads/" # specifies the default uploads directory for CloudCannon
 
+_inputs:
+  baseurl:
+    hidden: true
+  layout:
+    hidden: true
+  title:
+    hidden: true
+  sub-nav_section:
+    hidden: true
+  description:
+    hidden: true
+
 _comments:
   layout: Do NOT modify layouts. It may break things.
   baseurl: Do NOT modify baseurl. It WILL break all page links.

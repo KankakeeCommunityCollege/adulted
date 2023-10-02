@@ -3,14 +3,12 @@ layout: sub-nav
 baseurl: ../
 title: Programs
 description:
-banner: uploads/alumni-2.jpg
-banner_alt:
 sub-nav_section: Programs
 programs:
   - image: assets/img/programs_ged.jpg
     image_alt: GED Program at KCC
     image_caption: GED Prep
-    text: >-
+    description_markdown: >-
       **GED Prep** prepares you to take and pass the GED<sup>&reg;</sup> test.
       Sessions begin throughout the year. Classes are free and include resources at no cost
       to the student while enrolled.
@@ -19,7 +17,7 @@ programs:
   - image: assets/img/programs_esl.jpg
     image_alt: ESL Program at KCC
     image_caption: ESL
-    text: >-
+    description_markdown: >-
       **English as a Second Language (ESL)** classes teach English to non-native
       speakers. Instruction covers listening, speaking, reading and writing. Classes are free
       and include resources at no cost to the student.
@@ -28,12 +26,13 @@ programs:
   - image: assets/img/programs_literacy.jpg
     image_alt: 
     image_caption: Community Literacy Project
-    text: >-
+    description_markdown: >-
       **The Literacy program** provides volunteer tutors to help struggling
       readers with foundational skills in reading, writing and math. There is no cost to
       the student. Accepting volunteer applications.
     url: programs/community-literacy
     button_text: Learn More
+
 ---
 <main>
   <div class="container sub-nav__content--wrapper">
@@ -62,7 +61,7 @@ programs:
         </a>
       </div>
       <div class="col-md-8 facilities__text-margin">
-        <p>{{ item.text | markdownify }}</p>
+        <p>{{ item.description_markdown | markdownify }}</p>
         <p><a class="btn btn-primary" href="{{ page.baseurl }}{{ href }}">{{ item.button_text }}</a></p>
       </div>
     </div>
