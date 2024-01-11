@@ -21,6 +21,8 @@ slides:
     alt-text: Become a Tutor. Make a Difference.
     url: 'https://adulted.kcc.edu/programs/community-literacy/'
     text: Become&nbsp;a&nbsp;Tutor. Make&nbsp;a&nbsp;Difference.
+first_section_intro: Everyone is welcome here. We want to help you succeed.
+first_section_heading: Programs
 ---
 
 <!-- FTP test 4/15/2020 -->
@@ -34,7 +36,7 @@ slides:
           <a href="{{ slide.url }}"><img src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
           <div class="hero-slider__slider--heading-container text-center">
             <div class="hero-slider__heading--inner">
-              <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
+              {% if slide.text %}<h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>{% endif %}
             </div>
           </div>
         </div>
@@ -43,7 +45,7 @@ slides:
           <a href="{{ slide.url }}"><img src="assets/img/placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
           <div class="hero-slider__slider--heading-container text-center">
               <div class="hero-slider__heading--inner">
-                <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
+                {% if slide.text %}<h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>{% endif %}
               </div>
           </div>
         </div>
@@ -52,7 +54,13 @@ slides:
       </div>
     </div>
     <div class="row">
-      <div class="col text-center"><h2 class="red-heading editable">Programs</h2></div>
+      <div class="col text-center">
+        <p class="typography__h5--description mb-2 mt-3">{{ page.first_section_intro }}</p>
+        <div class="mb-4 editable">
+          <p><a href="{{ page.baseurl }}bienvenido/">Comience aquí su viaje a KCC. Siéntase como en su casa.</a></p>
+        </div>
+        <h2 class="red-heading">{{ page.first_section_heading }}</h2>
+      </div>
     </div>
     <div class="row">
       <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--mortarboard">
@@ -61,11 +69,14 @@ slides:
             {% include mortarboard.html %}
           </a>
         </div>
-        <a class="links__no-underline" href="{{ page.baseurl }}programs/ged/"><h4 class="typography__orange-h4 typography__sm-sup">GED<sup>&reg;</sup>PREP<sup></sup></h4></a>
+        <a class="links__no-underline" href="{{ page.baseurl }}programs/ged/">
+          <h4 class="typography__orange-h4 typography__sm-sup">GED<sup>&reg;</sup>PREP<sup></sup></h4>
+        </a>
         <div class="row action-cards__text-wrapper">
           <div class="col d-flex align-items-center position__col--min-height">
             <h5 class="typography__h5--description editable">
-                GED Prep prepares you to take and pass the GED test. Sessions begin throughout the year. Classes are free and include resources at no cost to the student while enrolled. 
+                GED Prep prepares you to take and pass the GED test. Sessions begin throughout the year.
+                Classes are free and include resources at no cost to the student while enrolled. 
             </h5>
           </div>
         </div>
@@ -78,11 +89,15 @@ slides:
               {% include chat-bubbles.html %}
             </a>
           </div>
-          <a href="{{ page.baseurl }}programs/esl/" class="links__no-underline"><h4 class="typography__orange-h4">ESL</h4></a>
+          <a href="{{ page.baseurl }}programs/esl/" class="links__no-underline">
+            <h4 class="typography__orange-h4">ESL</h4>
+          </a>
           <div class="row action-cards__text-wrapper">
             <div class="col d-flex align-items-center position__col--min-height">
               <h5 class="typography__h5--description editable">
-                  English as a Second Language (ESL) classes teach English to non-native speakers. Instruction covers listening, speaking, reading and writing. Classes are free and include resources at no cost to the student.
+                  English as a Second Language (ESL) classes teach English to non-native speakers.
+                  Instruction covers listening, speaking, reading and writing. Classes are free and
+                  include resources at no cost to the student.
               </h5>
             </div>
           </div>
@@ -95,11 +110,15 @@ slides:
             {% include books.html %}
           </a>
         </div>
-        <a href="{{ page.baseurl }}programs/community-literacy/" class="links__no-underline"><h4 class="typography__orange-h4">LITERACY</h4></a>
+        <a href="{{ page.baseurl }}programs/community-literacy/" class="links__no-underline">
+          <h4 class="typography__orange-h4">LITERACY</h4>
+        </a>
         <div class="row action-cards__text-wrapper">
           <div class="col d-flex align-items-center position__col--min-height">
             <h5 class="typography__h5--description editable">
-                The literacy program provides volunteer tutors to help struggling readers with foundational skills in reading, writing and math. There is no cost to the student. Accepting volunteer applications.
+                The literacy program provides volunteer tutors to help struggling readers with
+                foundational skills in reading, writing and math. There is no cost to the student.
+                Accepting volunteer applications.
             </h5>
           </div>
         </div>
