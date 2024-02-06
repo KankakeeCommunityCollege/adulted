@@ -3,6 +3,8 @@ layout: default
 baseurl: ../../../
 title: ESL information request form
 description:
+banner_image: /uploads/esl-students_DSC_0687.jpg
+banner_alternate_text: 'Two ESL students at a desk'
 ---
 
 <main class="container">
@@ -14,10 +16,16 @@ description:
           {%- comment -%}
           <h3 class="typography__h3--ged"></h3>
           {%- endcomment -%}
+          {% assign banner_first_char = page.banner_image | slice: 0 %}
+          {% if banner_first_char == '/' %}
+            {% assign banner_src = page.banner_image | remove_first: '/' %}
+          {% else %}
+            {% assign banner_src = page.banner_image %}
+          {% endif %}
           <img
-            src="{{ page.baseurl }}uploads/esl-students_DSC_0687.jpg"
+            src="{{ page.baseurl }}{{ banner_src }}"
             class="img-fluid"
-            alt="">
+            alt="{{ page.banner_alternate_text }}">
         </div>
       <p>Complete the form below and we'll contact you right away. Thank you!</p>
       <div class="mb-4">
