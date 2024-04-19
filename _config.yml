@@ -40,6 +40,8 @@ sub-nav_links:
   - link_text: 'Community Literacy'
     link_href: 'programs/community-literacy'
 collections:
+  tabs:
+    output: false
   students:
     output: false
   contacts:
