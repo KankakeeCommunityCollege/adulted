@@ -24,35 +24,9 @@ slides:
 first_section_intro: Everyone is welcome here. We want to help you succeed.
 first_section_heading: Programs
 ---
-
-<!-- FTP test 4/15/2020 -->
 <main>
   <div class="container container--tan-bg">
-    <div class="row">
-      <div class="col-md-12 hero-slider__slider">
-      {% for slide in page.slides %}
-        {% if forloop.first == true %}
-        <div>
-          <a href="{{ slide.url }}"><img src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
-          <div class="hero-slider__slider--heading-container text-center">
-            <div class="hero-slider__heading--inner">
-              {% if slide.text %}<h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>{% endif %}
-            </div>
-          </div>
-        </div>
-        {% else %}
-        <div>
-          <a href="{{ slide.url }}"><img src="assets/img/placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
-          <div class="hero-slider__slider--heading-container text-center">
-              <div class="hero-slider__heading--inner">
-                {% if slide.text %}<h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>{% endif %}
-              </div>
-          </div>
-        </div>
-        {% endif %}
-      {% endfor %}
-      </div>
-    </div>
+    {% include hero-slider.html %}
     <div class="row">
       <div class="col text-center">
         <p class="typography__h5--description mb-2 mt-3">{{ page.first_section_intro }}</p>
@@ -142,7 +116,7 @@ first_section_heading: Programs
       <div class="row">
         <div class="col position__col--no-padding text-center">
           <a href="{{ page.baseurl }}programs/ged/" aria-label="link to GED page">
-            <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/ged-banner.jpg" alt="Free high school equivalency classes! Several locations are available. GED graduates on average, earn $2,040 more." title="Free high school equivalency classes! Several locations are available. GED graduates on average, earn $2,040 more." />
+            <img class="banner__full-width" src="{{ page.baseurl }}assets/img/banner-placeholder.svg" data-src="{{ page.baseurl }}assets/img/ged-banner.jpg" alt="Free high school equivalency classes! Several locations are available. GED graduates on average, earn $2,040 more." title="Free high school equivalency classes! Several locations are available. GED graduates on average, earn $2,040 more." />
           </a>
           <a href="{{ page.baseurl }}programs/ged/" class="btn btn-primary position__img-btn">Learn More</a>
         </div>
@@ -164,10 +138,10 @@ first_section_heading: Programs
       </div>
       <div class="row">
         <div class="col position__col--no-padding text-center">
-          <a href="{{ page.baseurl }}programs/community-literacy/#volunteer" aria-label="link to the Community Literacy volunteering page">
-            <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/tutor-banner.jpg" alt="Become a tutor! Tutor adults in reading, writing, math, and English." title="Become a tutor! Tutor adults in reading, writing, math, and English." />
+          <a href="{{ page.baseurl }}programs/community-literacy/#volunteer-as-a-tutor" aria-label="link to the Community Literacy volunteering page">
+            <img class="banner__full-width" src="{{ page.baseurl }}assets/img/banner-placeholder.svg" data-src="{{ page.baseurl }}assets/img/tutor-banner.jpg" alt="Become a tutor! Tutor adults in reading, writing, math, and English." title="Become a tutor! Tutor adults in reading, writing, math, and English." />
           </a>
-          <a href="{{ page.baseurl }}programs/community-literacy/#volunteer" class="btn btn-primary position__img-btn">Learn More</a>
+          <a href="{{ page.baseurl }}programs/community-literacy/#volunteer-as-a-tutor" class="btn btn-primary position__img-btn">Learn More</a>
         </div>
       </div>
     </div>
@@ -188,7 +162,7 @@ first_section_heading: Programs
       <div class="row">
         <div class="col position__col--no-padding text-center">
           <a href="{{ page.baseurl }}programs/esl/" aria-label="link to the ESL page">
-            <img class="banner__full-width" src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}assets/img/esl-banner.jpg" alt="Learn english free! Classes offered in Kankakee, Watseka, & Momence." title="Learn english free! Classes offered in Kankakee, Watseka, & Momence." />
+            <img class="banner__full-width" src="{{ page.baseurl }}assets/img/banner-placeholder.svg" data-src="{{ page.baseurl }}assets/img/esl-banner.jpg" alt="Learn english free! Classes offered in Kankakee, Watseka, & Momence." title="Learn english free! Classes offered in Kankakee, Watseka, & Momence." />
           </a>
           <a href="{{ page.baseurl }}programs/esl/" class="btn btn-primary position__img-btn">Learn More</a>
         </div>
@@ -208,23 +182,31 @@ first_section_heading: Programs
           <ol id="jsTeaseList" class="latest-news-widget__latest__tease-group">
             {% assign sorted = site.students | sort: 'order' %}
             {% for student in sorted limit:4 %}
-
               <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
-                <div id="jsTeaseLink{{ forloop.index }}" class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center" href="{{ page.baseurl }}alumni/alumni-stories/#{{ student.name | replace: ' ', '-' | downcase }}" data-image="{{ student.portrait }}" data-image-alt="" tabindex="0" data-tease-type="" data-index="{{ forloop.index0 }}" aria-hidden="true">
-                  <div class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default" style="background-image: url('{{ page.baseurl }}{{ student.portrait }}')">
+                <div
+                  id="jsTeaseLink{{ forloop.index }}"
+                  class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center"
+                  data-image="{{ student.portrait }}"
+                  tabindex="0"
+                  data-index="{{ forloop.index0 }}"
+                  aria-hidden="true">
+                  <div
+                    class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default"
+                    style="background-image: url('{{ page.baseurl }}{{ student.portrait }}')">
                   </div>
                 <div class="latest-news-widget__latest__tease__hgroup">
                   <h3 class="typography__stories--quote">{{ student.quote }}</h3>
-                  <h3 class="latest-news-widget__latest__tease__overline typography__latest-news-widget__rollup-list-h notranslate">&nbsp;-&nbsp;{{ student.name }}</h3>
+                  <h3 class="latest-news-widget__latest__tease__overline typography__latest-news-widget__rollup-list-h notranslate">
+                    &nbsp;-&nbsp;{{ student.name }}
+                  </h3>
                 </div>
               </div>
             </li>
-
             {% endfor %}
           </ol>
         </div>
       </div>
-  </div></section>
-
+    </div>
+  </section>
   {% include contacts.html %}
 </main>

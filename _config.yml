@@ -4,7 +4,7 @@ site_name: "Adult & Community Education"
 port: 3000
 # BUILD
 timezone: America/Chicago
-theme: 'kcc-gem-theme'
+theme: 'kcc-gem-theme-original'
 url: https://adulted.kcc.edu
 public-url: https://adulted.kcc.edu
 canonical_baseurl: https://adulted.kcc.edu
@@ -40,6 +40,8 @@ sub-nav_links:
   - link_text: 'Community Literacy'
     link_href: 'programs/community-literacy'
 collections:
+  tabs:
+    output: false
   students:
     output: false
   contacts:
