@@ -1,6 +1,3 @@
-### Ignore the Gemfile to keep it out of cloudcannon ###
-# Gemfile
-
 ### General Apple things to ignore ###
 .DS_Store
 .AppleDouble
@@ -38,5 +35,3 @@ node_modules/
 # Jekyll 4 caching dir
 .jekyll-cache
 
-# DO NOT PUSH TO CLOUDCANNON
-.ruby-version
