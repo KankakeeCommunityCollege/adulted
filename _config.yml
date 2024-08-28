@@ -4,10 +4,12 @@ site_name: "Adult & Community Education"
 port: 3000
 # BUILD
 timezone: America/Chicago
-theme: 'kcc-gem-theme-original'
+theme: 'kcc-gem-theme'
 url: https://adulted.kcc.edu
 public-url: https://adulted.kcc.edu
 canonical_baseurl: https://adulted.kcc.edu
+theme_config: false
+core_site: false
 google-tag_key: GTM-M4MDTMS
 translate: true ## Uncomment to activate Google Translate Powers (unfortunately no cowpowers)!!
 nav_links:
