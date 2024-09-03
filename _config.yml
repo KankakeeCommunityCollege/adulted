@@ -4,21 +4,23 @@ site_name: "Adult & Community Education"
 port: 3000
 # BUILD
 timezone: America/Chicago
-theme: 'kcc-gem-theme-original'
-url: https://adulted.kcc.edu
-public-url: https://adulted.kcc.edu
-canonical_baseurl: https://adulted.kcc.edu
+theme: 'kcc-gem-theme'
+url: https://www.kcc.edu/adulted
+public-url: https://www.kcc.edu
+canonical_baseurl: https://www.kcc.edu/adulted
+theme_config: false
+core_site: false
 google-tag_key: GTM-M4MDTMS
 translate: true ## Uncomment to activate Google Translate Powers (unfortunately no cowpowers)!!
 nav_links:
   - link_text: About
-    link_href: 'about'
+    link_href: 'about/'
     button: false
   - link_text: Programs
-    link_href: 'programs'
+    link_href: 'programs/'
     button: false
   - link_text: Resources
-    link_href: 'resources'
+    link_href: 'resources/'
     button: false
   - link_text: Contact
     link_href: '#contact'
@@ -72,6 +74,7 @@ exclude:
   - "webpack.config.js"
   - "buildtools/"
   - "postcss.config.js"
+  - "look-for-string.mjs"
 
 uploads_dir: "uploads/" # specifies the default uploads directory for CloudCannon
 
