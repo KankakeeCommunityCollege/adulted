@@ -5,6 +5,7 @@ tabs_page: 'Community Literacy'
 ### Request Tutoring
 {: .typography__h3 }
 
+Please fill out the form below to request Community Literacy tutoring.
 
 <iframe
   id="JotFormIFrame-250995588016065"
