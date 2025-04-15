@@ -1,9 +1,9 @@
 ---
 name: Shannan Carrell
-contacts_title: Specialist III - ALIVE Literacy and Baby Talk Early Literacy Project
-display_order: 3
+contacts_title: Director of Adult & Community Education
+display_order: 1
 portrait_image: uploads/scarrell.jpg
-phone: 815-802-8307
+phone: 815-802-8304
 email: scarrell@kcc.edu
 department_email:
 ---
