@@ -36,4 +36,4 @@ Parents are the key to a child’s success in learning to read.  Reading, singin
 ### How to Enroll
 {: .typography__h3 }
 
-**For more information, [email Shannan Carrell](https://secure.jotform.com/90435102482954?to[first]=Shannan&amp;to[last]=Carrell&amp;submitEmail=scarrell%40kcc.edu){: target='_blank' rel='noopener noreferrer' } or call [815-802-8307](tel:+18158028307).**
+**For more information, [email Julie Bruno](https://secure.jotform.com/90435102482954?to[first]=Julie&amp;to[last]=Bruno&amp;submitEmail=jbruno%40kcc.edu){: target='_blank' rel='noopener noreferrer' } or call [815-802-8307](tel:+18158028307).**
