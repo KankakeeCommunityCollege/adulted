@@ -2,6 +2,7 @@
 name: 'Tutor Resources'
 tabs_page: 'Community Literacy'
 ---
+{::options auto_ids="false" /}
 ### Tutor Resources
 {: .typography__h3 }
 
