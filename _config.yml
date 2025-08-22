@@ -78,6 +78,7 @@ exclude:
   - "pa11y.*.json"
   - "pa11y-log.*.txt"
   - "look-for-string.mjs"
+  - "look-for-string-in-project-files.mjs"
 
 uploads_dir: "uploads/" # specifies the default uploads directory for CloudCannon
 
