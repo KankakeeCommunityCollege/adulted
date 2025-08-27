@@ -8,6 +8,7 @@ theme: 'kcc-gem-theme'
 url: https://www.kcc.edu/adulted
 public-url: https://www.kcc.edu
 canonical_baseurl: https://www.kcc.edu/adulted
+sitemap_baseurl: https://www.kcc.edu/adulted # Used to prefix the page URLs in sitemap.xml
 theme_config: false
 core_site: false
 google-tag_key: GTM-TNVWT2L
