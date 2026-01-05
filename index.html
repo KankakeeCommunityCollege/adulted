@@ -183,13 +183,7 @@ first_section_heading: Programs
             {% assign sorted = site.students | sort: 'order' %}
             {% for student in sorted limit:4 %}
               <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
-                <div
-                  id="jsTeaseLink{{ forloop.index }}"
-                  class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center"
-                  data-image="{{ student.portrait }}"
-                  tabindex="0"
-                  data-index="{{ forloop.index0 }}"
-                  aria-hidden="true">
+                <div class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center">
                   <div
                     class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default"
                     style="background-image: url('{{ page.baseurl }}{{ student.portrait }}')">
