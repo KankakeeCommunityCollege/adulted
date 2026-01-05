@@ -1,0 +1,15 @@
+@use '../0-tools/vars' as *;
+
+.container--tan-bg {
+  background-color: #fef3d8;
+  & .typography__orange-h4 {
+    color: #c67706;
+  }
+  & a:not(.btn) {
+    color: #0264F3;
+    &:hover,
+    &:focus {
+      color: #0147AC;
+    }
+  }
+}
