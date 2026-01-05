@@ -31,7 +31,7 @@ first_section_heading: Programs
       <div class="col text-center">
         <p class="typography__h5--description mb-2 mt-3">{{ page.first_section_intro }}</p>
         <div class="mb-4 editable">
-          <p><a href="{{ page.baseurl }}bienvenido/">Comience aquí su viaje a KCC. Siéntase como en su casa.</a></p>
+          <p><a href="{{ page.baseurl }}bienvenido/">Comience aquí su viaje a KCC. Siéntase como en su&nbsp;casa</a>.</p>
         </div>
         <h2 class="red-heading">{{ page.first_section_heading }}</h2>
       </div>
@@ -44,14 +44,14 @@ first_section_heading: Programs
           </a>
         </div>
         <a class="links__no-underline" href="{{ page.baseurl }}programs/ged/">
-          <h4 class="typography__orange-h4 typography__sm-sup">GED<sup>&reg;</sup>PREP<sup></sup></h4>
+          <h3 class="typography__orange-h4 typography__sm-sup">GED<sup>&reg;</sup>PREP<sup></sup></h3>
         </a>
         <div class="row action-cards__text-wrapper">
           <div class="col d-flex align-items-center position__col--min-height">
-            <h5 class="typography__h5--description editable">
-                GED Prep prepares you to take and pass the GED test. Sessions begin throughout the year.
-                Classes are free and include resources at no cost to the student while enrolled. 
-            </h5>
+            <p class="typography__h5--description editable">
+              GED Prep prepares you to take and pass the GED test. Sessions begin throughout the year.
+              Classes are free and include resources at no cost to the student while&nbsp;enrolled.
+            </p>
           </div>
         </div>
         <a href="{{ page.baseurl }}programs/ged/" class="btn btn-primary">Learn More</a>
@@ -64,15 +64,15 @@ first_section_heading: Programs
             </a>
           </div>
           <a href="{{ page.baseurl }}programs/esl/" class="links__no-underline">
-            <h4 class="typography__orange-h4">ESL</h4>
+            <h3 class="typography__orange-h4">ESL</h3>
           </a>
           <div class="row action-cards__text-wrapper">
             <div class="col d-flex align-items-center position__col--min-height">
-              <h5 class="typography__h5--description editable">
-                  English as a Second Language (ESL) classes teach English to non-native speakers.
-                  Instruction covers listening, speaking, reading and writing. Classes are free and
-                  include resources at no cost to the student.
-              </h5>
+              <p class="typography__h5--description editable">
+                English as a Second Language (ESL) classes teach English to non-native speakers.
+                Instruction covers listening, speaking, reading and writing. Classes are free and
+                include resources at no cost to the&nbsp;student.
+              </p>
             </div>
           </div>
             <a href="{{ page.baseurl }}programs/esl/" class="btn btn-primary">Learn More</a>
@@ -85,15 +85,15 @@ first_section_heading: Programs
           </a>
         </div>
         <a href="{{ page.baseurl }}programs/community-literacy/" class="links__no-underline">
-          <h4 class="typography__orange-h4">LITERACY</h4>
+          <h3 class="typography__orange-h4">LITERACY</h3>
         </a>
         <div class="row action-cards__text-wrapper">
           <div class="col d-flex align-items-center position__col--min-height">
-            <h5 class="typography__h5--description editable">
-                The literacy program provides volunteer tutors to help struggling readers with
-                foundational skills in reading, writing and math. There is no cost to the student.
-                Accepting volunteer applications.
-            </h5>
+            <p class="typography__h5--description editable">
+              The literacy program provides volunteer tutors to help struggling readers with
+              foundational skills in reading, writing and math. There is no cost to the student.
+              Accepting volunteer&nbsp;applications.
+            </p>
           </div>
         </div>
         <a href="{{ page.baseurl }}programs/community-literacy/" class="btn btn-primary">Learn More</a>
@@ -183,13 +183,7 @@ first_section_heading: Programs
             {% assign sorted = site.students | sort: 'order' %}
             {% for student in sorted limit:4 %}
               <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
-                <div
-                  id="jsTeaseLink{{ forloop.index }}"
-                  class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center"
-                  data-image="{{ student.portrait }}"
-                  tabindex="0"
-                  data-index="{{ forloop.index0 }}"
-                  aria-hidden="true">
+                <div class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center">
                   <div
                     class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default"
                     style="background-image: url('{{ page.baseurl }}{{ student.portrait }}')">
