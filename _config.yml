@@ -78,6 +78,8 @@ exclude:
   - "pa11y.sh"
   - "pa11y.*.json"
   - "pa11y-log.*.txt"
+  - "pa11y-ci.sh"
+  - "pa11y-ci-log.*.txt"
   - "look-for-string.mjs"
   - "look-for-string-in-project-files.mjs"
 
