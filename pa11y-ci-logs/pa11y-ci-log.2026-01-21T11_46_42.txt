@@ -1,0 +1,25 @@
+##############################
+##     Pa11y CI results     ##
+##############################
+
+##     Running Pa11y CI:
+##         DATETIME: 2026-01-21T11_46_42
+##         SITEMAP:  https://www.kcc.edu/adulted/pa11y-ci-sitemap.xml
+
+
+Running Pa11y on 13 URLs:
+ > https://www.kcc.edu/adulted/404.html - 0 errors
+ > https://www.kcc.edu/adulted/about/ - 0 errors
+ > https://www.kcc.edu/adulted/bienvenido/ - 0 errors
+ > https://www.kcc.edu/adulted/programs/community-literacy/ - 0 errors
+ > https://www.kcc.edu/adulted/programs/esl/ - 0 errors
+ > https://www.kcc.edu/adulted/programs/community-literacy/form/ - 0 errors
+ > https://www.kcc.edu/adulted/programs/ged/ged-plus-career/ - 0 errors
+ > https://www.kcc.edu/adulted/programs/ged/ - 0 errors
+ > https://www.kcc.edu/adulted/programs/ - 0 errors
+ > https://www.kcc.edu/adulted/resources/ - 0 errors
+ > https://www.kcc.edu/adulted/ - 0 errors
+ > https://www.kcc.edu/adulted/programs/esl/request-info/ - 0 errors
+ > https://www.kcc.edu/adulted/programs/ged/request-info/ - 0 errors
+
+✔ 13/13 URLs passed
