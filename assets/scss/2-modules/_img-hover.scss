@@ -38,15 +38,17 @@
   z-index: 2;
 }
 
+.img-ease {
+  transition: all 1s ease-in-out;
+}
+
+.img-link:focus-visible .img-hover,
 .img-hover:hover,
 .thumb-caption:hover + .img-hover { // Needed to make hover affect work when hovering the thumbnail caption
   opacity: .85;
 }
 
-.img-ease {
-  transition: all 1s ease-in-out;
-}
-
+.img-link:focus-visible img.img-ease,
 .img-link:hover img.img-ease {
   transform: scale(1.2, 1.2);
 }
