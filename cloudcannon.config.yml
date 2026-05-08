@@ -24,6 +24,8 @@ collections_config:
   tabs:
     path: _tabs
     icon: tab
+    create:
+      path: '[relative_base_path]/{name|slugify}.md'
     add_options:
       - name: New tab
         schema: tab
@@ -54,6 +56,17 @@ collections_config:
         icon: add
     schemas:
       student: .cloudcannon/schemas/student_testimonial.md
+  contacts:
+    path: _contacts
+    icon: person
+    create:
+      path: '[relative_base_path]/{name|slugify}.md'
+    add_options:
+      - name: New contact
+        schema: contact
+        icon: add
+    schemas:
+      student: .cloudcannon/schemas/contact.md
 
 _inputs:
   baseurl:
