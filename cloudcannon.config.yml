@@ -22,13 +22,14 @@ collections_config:
       - "!node_modules" # HIDE dependencies
       - "!*.mjs"        # HIDE your utility scripts
   tabs:
-    path: _tabs
-    icon: tab
+    schema: tab_template 
+    
+    # 2. This defines the templates available to this collection
     schemas:
-      default:
-        path: schemas/tab.md  # Reference the hidden file
-        name: Add tab
-        icon: add
+      tab_template:
+        path: schemas/tab.md
+        name: Standard Tab
+        icon: tab
 
 _inputs:
   baseurl:
