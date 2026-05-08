@@ -72,7 +72,7 @@ collections_config:
         schema: contact
         icon: add
     schemas:
-      student: .cloudcannon/schemas/contact.md
+      contact: .cloudcannon/schemas/contact.md
 
 _inputs:
   baseurl:
