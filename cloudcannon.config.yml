@@ -59,6 +59,12 @@ collections_config:
   contacts:
     path: _contacts
     icon: person
+    add_options:
+      - name: New contact
+        schema: contact
+        icon: person_add
+    schemas:
+      contact: .cloudcannon/schemas/contact.md
     create:
       path: '[relative_base_path]/{name|slugify}.md'
     _inputs:
@@ -67,12 +73,6 @@ collections_config:
       display_order:
         type: number
         comment: Controls the display order of contacts (1 is first).
-    add_options:
-      - name: New contact
-        schema: contact
-        icon: add
-    schemas:
-      contact: .cloudcannon/schemas/contact.md
 
 _inputs:
   baseurl:
