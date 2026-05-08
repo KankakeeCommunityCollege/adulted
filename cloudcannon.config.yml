@@ -1,0 +1,44 @@
+collection_groups:
+  - heading: Pages
+    collections:
+      - pages
+  - heading: Data
+    collections:
+      - tabs
+      - students
+      - contacts
+
+collections_config:
+  pages:
+    path: /
+    name: Pages
+    icon: description
+    # This list is your 'Explorer configuration'
+    glob:
+      - "**/*.html"     # Show all HTML files
+      - "**/*.md"       # Show all Markdown files
+      - "!pa11y.*"      # HIDE accessibility logs
+      - "!_data/**"     # HIDE the data folder
+      - "!node_modules" # HIDE dependencies
+      - "!*.mjs"        # HIDE your utility scripts
+  tabs:
+    path: _tabs
+    icon: tab
+    schemas:
+      default:
+        value:
+          name: 'Name that will appear on the tab'
+          tabs_page: 'Title of the page the tabs should show on'
+
+_inputs:
+  baseurl:
+    hidden: true
+  layout:
+    hidden: true
+  title:
+    hidden: true
+  sub-nav_section:
+    hidden: true
+
+_comments:
+  description: "Descriptions are seen by search engines like Google and displayed in search results"
