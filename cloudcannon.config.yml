@@ -24,12 +24,14 @@ collections_config:
   tabs:
     add_options:
       - name: Add Tab
+        icon: tab
         schema: tab
     
     # 2. This defines the templates available to this collection
     schemas:
       tab:
         path: .cloudcannon/schemas/tab.md
+        icon: tab
 
 _inputs:
   baseurl:
