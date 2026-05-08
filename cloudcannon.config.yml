@@ -74,6 +74,9 @@ collections_config:
       contacts_title:
         type: text
         comment: KCC job title
+      phone:
+        type: text
+        comment: Include area code (e.g. 815-802-8200)
       department_email:
         comment: Optionally display the department email (e.g. adulted@kcc.edu).
       display_order:
