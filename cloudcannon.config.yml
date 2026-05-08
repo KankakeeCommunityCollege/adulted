@@ -22,16 +22,22 @@ collections_config:
       - "!node_modules" # HIDE dependencies
       - "!*.mjs"        # HIDE your utility scripts
   tabs:
+    path: _tabs
     icon: tab
     add_options:
-      - name: Add Tab
+      - name: New tab
         schema: tab
+        icon: add
+      - name: New tab with custom ID
+        schema: tab_alternate_id
+        icon: add
     
     # 2. This defines the templates available to this collection
     schemas:
       tab:
         path: .cloudcannon/schemas/tab.md
-        icon: tab
+      tab_alternate_id:
+        path: .cloudcannon/schemas/tab_alternate_id.md
 
 _inputs:
   baseurl:
