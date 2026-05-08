@@ -59,14 +59,15 @@ collections_config:
   contacts:
     path: _contacts
     icon: person
+    create:
+      path: '[relative_base_path]/{name|slugify}.md'
     add_options:
       - name: New contact
         schema: contact
         icon: person_add
     schemas:
-      contact: .cloudcannon/schemas/contact.md
-    create:
-      path: '[relative_base_path]/{name|slugify}.md'
+      contact: 
+        path: .cloudcannon/schemas/contact.md
     _inputs:
       department_email:
         comment: Optionally display the department email (e.g. adulted@kcc.edu).
