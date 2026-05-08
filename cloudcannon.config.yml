@@ -48,8 +48,6 @@ collections_config:
       date:
         instance_value: NOW
         hidden: true
-      portrait:
-        type: image
     add_options:
       - name: New testimonial
         schema: student

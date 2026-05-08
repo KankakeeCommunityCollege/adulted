@@ -182,11 +182,11 @@ first_section_heading: Programs
           <ol id="jsTeaseList" class="latest-news-widget__latest__tease-group">
             {% assign sorted = site.students | sort: 'date' | reverse %}
             {% for student in sorted limit:4 %}
-            {% assign first_char = student.portrait | slice: 0 %}
+            {% assign first_char = student.portrait_image | slice: 0 %}
             {% if first_char == '/' %}
-              {% assign portrait = student.portrait | remove_first: '/' %}
+              {% assign portrait = student.portrait_image | remove_first: '/' %}
             {% else %}
-              {% assign portrait = student.portrait %}
+              {% assign portrait = student.portrait_image %}
             {% endif %}
               <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
                 <div class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center">
