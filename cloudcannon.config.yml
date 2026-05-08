@@ -26,9 +26,9 @@ collections_config:
     icon: tab
     schemas:
       default:
-        value:
-          name: 'Name that will appear on the tab'
-          tabs_page: 'Title of the page the tabs should show on'
+        path: schemas/tab.md  # Reference the hidden file
+        name: Add tab
+        icon: add
 
 _inputs:
   baseurl:
