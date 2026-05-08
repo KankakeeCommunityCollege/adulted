@@ -42,10 +42,14 @@ collections_config:
     path: _students
     name: Student Testimonials
     icon: 3p
+    create:
+      path: '[relative_base_path]/{name|slugify}.md'
     _inputs:
       date:
         instance_value: NOW
         hidden: true
+      portrait:
+        type: image
     add_options:
       - name: New testimonial
         schema: student
