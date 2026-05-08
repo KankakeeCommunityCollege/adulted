@@ -61,6 +61,12 @@ collections_config:
     icon: person
     create:
       path: '[relative_base_path]/{name|slugify}.md'
+    _inputs:
+      department_email:
+        comment: Optionally display the department email (e.g. adulted@kcc.edu).
+      display_order:
+        type: number
+        comment: Controls the display order of contacts (1 is first).
     add_options:
       - name: New contact
         schema: contact
