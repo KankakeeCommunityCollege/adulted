@@ -38,6 +38,20 @@ collections_config:
         path: .cloudcannon/schemas/tab.md
       tab_alternate_id:
         path: .cloudcannon/schemas/tab_alternate_id.md
+  students:
+    path: _students
+    name: Student Testimonials
+    icon: 3p
+    _inputs:
+      date:
+        instance_value: NOW
+        hidden: true
+    add_options:
+      - name: New testimonial
+        schema: student
+        icon: add
+    schemas:
+      student: .cloudcannon/schemas/student_testimonial.md
 
 _inputs:
   baseurl:
