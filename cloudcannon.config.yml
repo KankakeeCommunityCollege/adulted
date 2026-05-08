@@ -29,7 +29,7 @@ collections_config:
     # 2. This defines the templates available to this collection
     schemas:
       tab:
-        path: schemas/tab.md
+        path: .cloudcannon/schemas/tab.md
 
 _inputs:
   baseurl:
