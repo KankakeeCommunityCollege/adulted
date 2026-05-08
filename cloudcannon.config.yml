@@ -69,6 +69,11 @@ collections_config:
       contact: 
         path: .cloudcannon/schemas/contact.md
     _inputs:
+      name:
+        type: text
+      contacts_title:
+        type: text
+        comment: KCC job title
       department_email:
         comment: Optionally display the department email (e.g. adulted@kcc.edu).
       display_order:
