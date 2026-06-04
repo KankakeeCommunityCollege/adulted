@@ -24,183 +24,182 @@ slides:
 first_section_intro: Everyone is welcome here. We want to help you succeed.
 first_section_heading: Programs
 ---
-<main id="content">
-  <div class="container container--tan-bg">
-    {% include hero-slider.html %}
-    <div class="row">
-      <div class="col text-center">
-        <p class="typography__h5--description mb-2 mt-3">{{ page.first_section_intro }}</p>
-        <div class="mb-4 editable">
-          <p><a href="{{ page.baseurl }}bienvenido/">Comience aquí su viaje a KCC. Siéntase como en su&nbsp;casa</a>.</p>
+<div class="container container--tan-bg">
+  <h1 class="visually-hidden">Adult & Community Education Homepage</h1>
+  {% include hero-slider.html alternate_heading_level="p" %}
+  <div class="row">
+    <div class="col text-center">
+      <p class="typography__h5--description mb-2 mt-3">{{ page.first_section_intro }}</p>
+      <div class="mb-4 editable">
+        <p><a href="{{ page.baseurl }}bienvenido/">Comience aquí su viaje a KCC. Siéntase como en su&nbsp;casa</a>.</p>
+      </div>
+      <h2 class="red-heading">{{ page.first_section_heading }}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--mortarboard">
+      <div class="action-cards__svg--wrapper">
+        <a href="{{ page.baseurl }}programs/ged/" aria-label="link to GED page">
+          {% include mortarboard.html %}
+        </a>
+      </div>
+      <a class="links__no-underline" href="{{ page.baseurl }}programs/ged/">
+        <h3 class="typography__orange-h4 typography__sm-sup">GED<sup>&reg;</sup>PREP<sup></sup></h3>
+      </a>
+      <div class="row action-cards__text-wrapper">
+        <div class="col d-flex align-items-center position__col--min-height">
+          <p class="typography__h5--description editable">
+            GED Prep prepares you to take and pass the GED test. Sessions begin throughout the year.
+            Classes are free and include resources at no cost to the student while&nbsp;enrolled.
+          </p>
         </div>
-        <h2 class="red-heading">{{ page.first_section_heading }}</h2>
+      </div>
+      <a href="{{ page.baseurl }}programs/ged/" class="btn btn-primary">Learn More</a>
+    </div>
+    <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--esl">
+      <div class="impact__give">
+        <div class="action-cards__svg--wrapper">
+          <a href="{{ page.baseurl }}programs/esl/" aria-label="link to ESL page">
+            {% include chat-bubbles.html %}
+          </a>
+        </div>
+        <a href="{{ page.baseurl }}programs/esl/" class="links__no-underline">
+          <h3 class="typography__orange-h4">ESL</h3>
+        </a>
+        <div class="row action-cards__text-wrapper">
+          <div class="col d-flex align-items-center position__col--min-height">
+            <p class="typography__h5--description editable">
+              English as a Second Language (ESL) classes teach English to non-native speakers.
+              Instruction covers listening, speaking, reading and writing. Classes are free and
+              include resources at no cost to the&nbsp;student.
+            </p>
+          </div>
+        </div>
+          <a href="{{ page.baseurl }}programs/esl/" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+    <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--literacy">
+      <div class="action-cards__svg--wrapper">
+        <a href="{{ page.baseurl }}programs/community-literacy/" aria-label="link to community literacy page">
+          {% include books.html %}
+        </a>
+      </div>
+      <a href="{{ page.baseurl }}programs/community-literacy/" class="links__no-underline">
+        <h3 class="typography__orange-h4">LITERACY</h3>
+      </a>
+      <div class="row action-cards__text-wrapper">
+        <div class="col d-flex align-items-center position__col--min-height">
+          <p class="typography__h5--description editable">
+            The literacy program provides volunteer tutors to help struggling readers with
+            foundational skills in reading, writing and math. There is no cost to the student.
+            Accepting volunteer&nbsp;applications.
+          </p>
+        </div>
+      </div>
+      <a href="{{ page.baseurl }}programs/community-literacy/" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+</div>
+
+<section class="position__section--margin-top">
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top">
+        <h2 class="typography__red-h3 typography__sm-sup">GED<sup>&reg;</sup> PREP Program</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--mortarboard">
-        <div class="action-cards__svg--wrapper">
-          <a href="{{ page.baseurl }}programs/ged/" aria-label="link to GED page">
-            {% include mortarboard.html %}
-          </a>
-        </div>
-        <a class="links__no-underline" href="{{ page.baseurl }}programs/ged/">
-          <h3 class="typography__orange-h4 typography__sm-sup">GED<sup>&reg;</sup>PREP<sup></sup></h3>
-        </a>
-        <div class="row action-cards__text-wrapper">
-          <div class="col d-flex align-items-center position__col--min-height">
-            <p class="typography__h5--description editable">
-              GED Prep prepares you to take and pass the GED test. Sessions begin throughout the year.
-              Classes are free and include resources at no cost to the student while&nbsp;enrolled.
-            </p>
-          </div>
-        </div>
-        <a href="{{ page.baseurl }}programs/ged/" class="btn btn-primary">Learn More</a>
+      <div class="col position__col--no-padding position__col--img-overline">
+        <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="" />
       </div>
-      <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--esl">
-        <div class="impact__give">
-          <div class="action-cards__svg--wrapper">
-            <a href="{{ page.baseurl }}programs/esl/" aria-label="link to ESL page">
-              {% include chat-bubbles.html %}
-            </a>
-          </div>
-          <a href="{{ page.baseurl }}programs/esl/" class="links__no-underline">
-            <h3 class="typography__orange-h4">ESL</h3>
-          </a>
-          <div class="row action-cards__text-wrapper">
-            <div class="col d-flex align-items-center position__col--min-height">
-              <p class="typography__h5--description editable">
-                English as a Second Language (ESL) classes teach English to non-native speakers.
-                Instruction covers listening, speaking, reading and writing. Classes are free and
-                include resources at no cost to the&nbsp;student.
-              </p>
-            </div>
-          </div>
-            <a href="{{ page.baseurl }}programs/esl/" class="btn btn-primary">Learn More</a>
-        </div>
-      </div>
-      <div class="col-md-4 text-center action-cards__col--margin-btm action-cards__col--literacy">
-        <div class="action-cards__svg--wrapper">
-          <a href="{{ page.baseurl }}programs/community-literacy/" aria-label="link to community literacy page">
-            {% include books.html %}
-          </a>
-        </div>
-        <a href="{{ page.baseurl }}programs/community-literacy/" class="links__no-underline">
-          <h3 class="typography__orange-h4">LITERACY</h3>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding text-center">
+        <a href="{{ page.baseurl }}programs/ged/" aria-label="link to GED page">
+          <img class="banner__full-width" src="{{ page.baseurl }}assets/img/banner-placeholder.svg" data-src="{{ page.baseurl }}assets/img/ged-banner.jpg" alt="Free high school equivalency classes! Several locations are available. GED graduates on average, earn $2,040 more." title="Free high school equivalency classes! Several locations are available. GED graduates on average, earn $2,040 more." />
         </a>
-        <div class="row action-cards__text-wrapper">
-          <div class="col d-flex align-items-center position__col--min-height">
-            <p class="typography__h5--description editable">
-              The literacy program provides volunteer tutors to help struggling readers with
-              foundational skills in reading, writing and math. There is no cost to the student.
-              Accepting volunteer&nbsp;applications.
-            </p>
-          </div>
-        </div>
-        <a href="{{ page.baseurl }}programs/community-literacy/" class="btn btn-primary">Learn More</a>
+        <a href="{{ page.baseurl }}programs/ged/" class="btn btn-primary position__img-btn">Learn More</a>
       </div>
     </div>
   </div>
+</section>
 
-  <section class="position__section--margin-top">
-    <div class="container">
-      <div class="row">
-        <div class="col stories__left-col--margin-top">
-          <h3 class="typography__red-h3 typography__sm-sup">GED<sup>&reg;</sup> PREP Program</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col position__col--no-padding position__col--img-overline">
-          <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col position__col--no-padding text-center">
-          <a href="{{ page.baseurl }}programs/ged/" aria-label="link to GED page">
-            <img class="banner__full-width" src="{{ page.baseurl }}assets/img/banner-placeholder.svg" data-src="{{ page.baseurl }}assets/img/ged-banner.jpg" alt="Free high school equivalency classes! Several locations are available. GED graduates on average, earn $2,040 more." title="Free high school equivalency classes! Several locations are available. GED graduates on average, earn $2,040 more." />
-          </a>
-          <a href="{{ page.baseurl }}programs/ged/" class="btn btn-primary position__img-btn">Learn More</a>
-        </div>
+<section class="position__section--margin-top">
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top">
+        <h2 class="typography__red-h3 typography__upper">Literacy Program - Volunteers Needed</h2>
       </div>
     </div>
-  </section>
-
-  <section class="position__section--margin-top">
-    <div class="container">
-      <div class="row">
-        <div class="col stories__left-col--margin-top">
-          <h3 class="typography__red-h3 typography__upper">Literacy Program - Volunteers Needed</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col position__col--no-padding position__col--img-overline">
-          <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col position__col--no-padding text-center">
-          <a href="{{ page.baseurl }}programs/community-literacy/#volunteer-as-a-tutor" aria-label="link to the Community Literacy volunteering page">
-            <img class="banner__full-width" src="{{ page.baseurl }}assets/img/banner-placeholder.svg" data-src="{{ page.baseurl }}assets/img/tutor-banner.jpg" alt="Become a tutor! Tutor adults in reading, writing, math, and English." title="Become a tutor! Tutor adults in reading, writing, math, and English." />
-          </a>
-          <a href="{{ page.baseurl }}programs/community-literacy/#volunteer-as-a-tutor" class="btn btn-primary position__img-btn">Learn More</a>
-        </div>
+    <div class="row">
+      <div class="col position__col--no-padding position__col--img-overline">
+        <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="" />
       </div>
     </div>
-  </section>
-
-  <section class="position__section--margin-top">
-    <div class="container">
-      <div class="row">
-        <div class="col stories__left-col--margin-top">
-          <h3 class="typography__red-h3 typography__upper">ENGLISH AS A SECOND LANGUAGE (ESL) Program</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col position__col--no-padding position__col--img-overline">
-          <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col position__col--no-padding text-center">
-          <a href="{{ page.baseurl }}programs/esl/" aria-label="link to the ESL page">
-            <img class="banner__full-width" src="{{ page.baseurl }}assets/img/banner-placeholder.svg" data-src="{{ page.baseurl }}assets/img/esl-banner.jpg" alt="Learn english free! Classes offered in Kankakee, Watseka, & Momence." title="Learn english free! Classes offered in Kankakee, Watseka, & Momence." />
-          </a>
-          <a href="{{ page.baseurl }}programs/esl/" class="btn btn-primary position__img-btn">Learn More</a>
-        </div>
+    <div class="row">
+      <div class="col position__col--no-padding text-center">
+        <a href="{{ page.baseurl }}programs/community-literacy/#volunteer-as-a-tutor" aria-label="link to the Community Literacy volunteering page">
+          <img class="banner__full-width" src="{{ page.baseurl }}assets/img/banner-placeholder.svg" data-src="{{ page.baseurl }}assets/img/tutor-banner.jpg" alt="Become a tutor! Tutor adults in reading, writing, math, and English." title="Become a tutor! Tutor adults in reading, writing, math, and English." />
+        </a>
+        <a href="{{ page.baseurl }}programs/community-literacy/#volunteer-as-a-tutor" class="btn btn-primary position__img-btn">Learn More</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col stories__left-col--margin-top typography__col--heading-underline">
-          <h3 class="typography__red-h3 typography__red-h3--margin-btm">Student Testimonials</h3>
-        </div>
+<section class="position__section--margin-top">
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top">
+        <h2 class="typography__red-h3 typography__upper">ENGLISH AS A SECOND LANGUAGE (ESL) Program</h2>
       </div>
-      <div class="row">
-        <div class="col">
-          <ol id="jsTeaseList" class="latest-news-widget__latest__tease-group">
-            {% assign sorted = site.students | sort: 'order' %}
-            {% for student in sorted limit:4 %}
-              <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
-                <div class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center">
-                  <div
-                    class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default"
-                    style="background-image: url('{{ page.baseurl }}{{ student.portrait }}')">
-                  </div>
-                <div class="latest-news-widget__latest__tease__hgroup">
-                  <h3 class="typography__stories--quote">{{ student.quote }}</h3>
-                  <h3 class="latest-news-widget__latest__tease__overline typography__latest-news-widget__rollup-list-h notranslate">
-                    &nbsp;-&nbsp;{{ student.name }}
-                  </h3>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding position__col--img-overline">
+        <img src="{{ page.baseurl }}assets/img/heading-bg-underline.png" alt="" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col position__col--no-padding text-center">
+        <a href="{{ page.baseurl }}programs/esl/" aria-label="link to the ESL page">
+          <img class="banner__full-width" src="{{ page.baseurl }}assets/img/banner-placeholder.svg" data-src="{{ page.baseurl }}assets/img/esl-banner.jpg" alt="Learn english free! Classes offered in Kankakee, Watseka, & Momence." title="Learn english free! Classes offered in Kankakee, Watseka, & Momence." />
+        </a>
+        <a href="{{ page.baseurl }}programs/esl/" class="btn btn-primary position__img-btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col stories__left-col--margin-top typography__col--heading-underline">
+        <h2 class="typography__red-h3 typography__red-h3--margin-btm">Student Testimonials</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ol id="jsTeaseList" class="latest-news-widget__latest__tease-group">
+          {% assign sorted = site.students | sort: 'order' %}
+          {% for student in sorted limit:4 %}
+            <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
+              <div class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center">
+                <div
+                  class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default"
+                  style="background-image: url('{{ page.baseurl }}{{ student.portrait }}')">
                 </div>
+              <div class="latest-news-widget__latest__tease__hgroup">
+                <p class="typography__stories--quote typography--heading-line-height">{{ student.quote }}</p>
+                <h3 class="latest-news-widget__latest__tease__overline typography__latest-news-widget__rollup-list-h notranslate">
+                  &nbsp;-&nbsp;{{ student.name }}
+                </h3>
               </div>
-            </li>
-            {% endfor %}
-          </ol>
-        </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
       </div>
     </div>
-  </section>
-  {% include contacts.html %}
-</main>
+  </div>
+</section>
+{% include contacts.html section_heading_level="h2" name_heading_level="h3" %}

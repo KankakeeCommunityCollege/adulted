@@ -3,15 +3,15 @@ name: 'Tutor Resources'
 tabs_page: 'Community Literacy'
 ---
 {::options auto_ids="false" /}
-### Tutor Resources
-{: .typography__h3 }
+## Tutor Resources
+{: .typography__h2 }
 
 [Monthly tutor report](../../uploads/pdf/monthly-tutor-report.pdf){: target="_blank" rel="noopener noreferrer"} - Use this form to report your tutoring hours. Please return a completed form each month, even if you have not logged any tutoring hours.
 
 [First meeting worksheet](../../uploads/pdf/getting-to-know-you-interview.pdf){: target="_blank" rel="noopener noreferrer"} - Use the Getting to Know You Interview worksheet to learn about the person you are tutoring.
 
-#### Helpful Websites
-{: .typography__h4 }
+### Helpful Websites
+{: .typography__h3 }
 
 * [Literacy Dupage](http://www.literacyvolunteersdupage.org/){: target="_blank" rel="noopener noreferrer"}
 * [Newsela](https://newsela.com/){: target="_blank" rel="noopener noreferrer"} - builds reading comprehension through leveled articles, real-time assessments and actionable insights
