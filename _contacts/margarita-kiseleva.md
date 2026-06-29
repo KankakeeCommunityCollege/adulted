@@ -1,5 +1,5 @@
 ---
-name: Margarita Kiseleva
+name: Margarita Buzzell
 contacts_title: ESL Coordinator
 display_order: 4
 portrait_image: /uploads/margarita-kiseleva-cropped.jpg
