@@ -177,28 +177,35 @@ first_section_heading: Programs
         <h2 class="typography__red-h3 typography__red-h3--margin-btm">Student Testimonials</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <ol id="jsTeaseList" class="latest-news-widget__latest__tease-group">
-          {% assign sorted = site.students | sort: 'order' %}
-          {% for student in sorted limit:4 %}
-            <li class="latest-news-widget__latest__tease latest-news-widget__latest__tease--default latest-news-widget__latest__tease--has-image">
-              <div class="latest-news-widget__latest__tease__link js-hp-latest-tease-link d-flex align-items-center">
-                <div
-                  class="latest-news-widget__latest__tease__img-mod latest-news-widget__latest__tease__img-mod--default"
-                  style="background-image: url('{{ page.baseurl }}{{ student.portrait }}')">
-                </div>
-              <div class="latest-news-widget__latest__tease__hgroup">
-                <p class="typography__stories--quote typography--heading-line-height">{{ student.quote }}</p>
-                <h3 class="latest-news-widget__latest__tease__overline typography__latest-news-widget__rollup-list-h notranslate">
-                  &nbsp;-&nbsp;{{ student.name }}
-                </h3>
-              </div>
-            </div>
-          </li>
-          {% endfor %}
-        </ol>
+    {% assign sorted = site.students | sort: 'order' %}
+    <div class="row mb-3 testimonial__wrapper">
+      {% for student in sorted limit:4 %}
+      <div class="col-12 col-md-6 d-flex">
+        <div class="testimonial d-flex">
+          <figure class="testimonial__figure my-auto">
+            <blockquote class="testimonial__quote">
+              <p class="testimonial__p"><span class="testimonial__span">{{ student.quote }}</span></p>
+            </blockquote>
+            <figcaption class="testimonial__caption">
+              {% assign first_char = student.portrait_image | slice: 0 %}
+              {% if first_char == '/' %}
+                {% assign portrait = student.portrait_image | remove_first: '/' %}
+              {% else %}
+                {% assign portrait = student.portrait_image %}
+              {% endif %}
+              <img
+                data-src="{{ page.baseurl }}{{ portrait }}"
+                src="{{ page.baseurl }}assets/img/placeholder_square.jpg"
+                class="testimonial__img my-auto img-fluid rounded-circle"
+                height="80"
+                width="80"
+                alt="{{ student.name }}">
+              <cite class="testimonial__cite">{{ student.name }}</cite>
+            </figcaption>
+          </figure>
+        </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>

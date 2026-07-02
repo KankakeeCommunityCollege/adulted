@@ -1,0 +1,156 @@
+@use '../0-tools/vars' as *;
+// ================================================================== //
+// Custom styling for the (student) testimonials component:           //
+//   1.) Grid/layout styling at the top                               //
+//   2.) Typographical styling at the end                             //
+// ================================================================== //
+
+// ================================================================== //
+// 1.) Grid/layout styles to place the image on the left and          //
+//     quote/name on the right.                                       //
+// ================================================================== //
+
+.testimonial {
+  border-bottom: 1px solid $black;
+  min-height: 195px;
+  padding-right: 0px;
+  padding-bottom: 18px;
+  padding-left: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial {
+    min-height: 220px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .testimonial {
+    min-height: 195px;
+  }
+}
+
+.testimonial__wrapper > :nth-child(n+2) .testimonial {
+  padding-top: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial__wrapper> :nth-child(2) .testimonial {
+    padding-top: 0;
+  }
+  .testimonial__wrapper > :nth-child(n+3) .testimonial {
+    padding-top: 18px;
+  }
+}
+
+.testimonial__figure {
+  display: grid;
+  /* Column 1: Fixed 80px for testimonial image | Column 2: The quote */
+  grid-template-columns: 80px 1fr;
+  column-gap: 20px;
+  align-items: start;
+}
+
+/* Force the quote into the top-right cell */
+.testimonial__quote {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  max-width: 320px;
+}
+
+/* Strip the layout container properties from the caption wrapper
+  so that the children can be manipulated by the grid layout */
+.testimonial__caption {
+  display: contents;
+}
+
+/* Now that the caption wrapper is "invisible" to the layout,
+   these items grab parent grid tracks perfectly */
+.testimonial__img {
+  grid-column: 1;
+  grid-row: 1 / span 2; // Spans both rows on the left
+}
+
+.testimonial__cite::before {
+  content: "\2013\a0" / "";
+}
+
+.testimonial__cite {
+  grid-column: 2;
+  grid-row: 2; // Sits cleanly in the bottom-right cell, under the quote
+}
+
+// ================================================================== //
+// 2.) Typographical styles for the testimonial component             //
+// ================================================================== //
+
+//
+.testimonial__span {
+  position: relative;
+  display: inline;
+}
+
+.testimonial__span::before,
+.testimonial__span::after {
+  font-size: 3rem;
+  color: #cecece;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Opening Quote */
+.testimonial__span::before {
+  content: "\201C";
+  position: absolute;
+  font-weight: 600;
+  line-height: 1;
+  left: -1.25rem;
+  top: -0.5rem;
+}
+
+/* Closing Quote */
+.testimonial__span::after {
+  content: "\201D";
+  display: inline;
+  line-height: 0;
+  margin-left: 0.15rem;
+  vertical-align: -0.35em;
+}
+
+.testimonial__p {
+  color: #0f3b63;
+  font-family: $font-family-oswald;
+  font-size: 1.16rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 488px) {
+  .testimonial__p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial__p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .testimonial__p {
+    font-size: 1.4rem;
+  }
+}
+
+// Cite = testimonial quote source
+.testimonial__cite {
+  color: $black;
+  font-family: $font-family-roboto;
+  font-size: .95rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: .04rem;
+  text-transform: uppercase;
+}
